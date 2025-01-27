@@ -4,10 +4,10 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import NavLink from "@/router/nav-link";
 import paths from "@/router/paths";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 import { LucideMenu, LucideSearch } from "lucide-react";
-import Link from "next/link";
 import ThemeBtn from "./theme-btn";
 
 type Props = {};
@@ -43,7 +43,12 @@ const Navigation = (props: Props) => {
                   "px-3 py-2.5 inline-flex text-sm relative after:bottom-0 after:left-0 after:absolute after:w-full after:h-0 after:duration-300 after:bg-foreground/10 hover:after:h-0.5"
                 }
               >
-                <Link href={item.path}>{item.title}</Link>
+                <NavLink
+                  href={item.path}
+                  className="[&.active]:after:h-0.5 [&.active]:after:bg-foreground"
+                >
+                  {item.title}
+                </NavLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
           ))}
