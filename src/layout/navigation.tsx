@@ -5,23 +5,31 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 import { LucideHome, LucideSun } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {};
 
 const Navigation = (props: Props) => {
   return (
     <header className="container flex items-center justify-between py-5">
-      <Button size={"icon"} variant={"ghost"} className="rounded-full">
+      <Button size={"icon"} variant={"ghost"} className="rounded-full hidden">
         <LucideHome className="!size-5" />
       </Button>
 
-      <NavigationMenu>
-        <NavigationMenuList className="gap-1">
+      <Link href={"/"}>
+        <Image src={"/brand/logo.svg"} alt="Logo" width={50} height={50} />
+      </Link>
+
+      <NavigationMenu className="max-md:hidden">
+        <NavigationMenuList className="border rounded-full overflow-hidden">
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "pl-5")}
+            >
               Home
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -31,17 +39,14 @@ const Navigation = (props: Props) => {
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <div className="size-10 bg-foreground rounded-full inline-flex flex-col items-center justify-center mx-4">
-              <Image src={"/vercel.svg"} alt="Logo" width={20} height={20} />
-            </div>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Javascript
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={cn(navigationMenuTriggerStyle(), "pr-5")}
+            >
               React JS
             </NavigationMenuLink>
           </NavigationMenuItem>
