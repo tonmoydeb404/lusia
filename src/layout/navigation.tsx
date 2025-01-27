@@ -6,8 +6,9 @@ import {
 } from "@/components/ui/navigation-menu";
 import paths from "@/router/paths";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import { LucideMenu, LucideSearch, LucideSun } from "lucide-react";
+import { LucideMenu, LucideSearch } from "lucide-react";
 import Link from "next/link";
+import ThemeBtn from "./theme-btn";
 
 type Props = {};
 
@@ -53,9 +54,7 @@ const Navigation = (props: Props) => {
         <Button size={"icon"} variant={"ghost"} className="rounded-full">
           <LucideSearch className="!size-5" />
         </Button>
-        <Button size={"icon"} variant={"ghost"} className="rounded-full">
-          <LucideSun className="!size-5" />
-        </Button>
+        <ThemeBtn />
       </section>
     </header>
   );
