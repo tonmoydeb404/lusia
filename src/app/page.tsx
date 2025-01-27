@@ -1,3 +1,4 @@
+import LabelSection from "@/components/sections/label-section";
 import { Button } from "@/components/ui/button";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LucideFile } from "lucide-react";
@@ -31,6 +32,21 @@ const HomePage = (props: Props) => {
             <SiGithub /> Github
           </Button>
         </div>
+      </section>
+
+      <section className="container grid grid-cols-3 pb-24 gap-5">
+        <LabelSection label="Github Activity" className="col-span-2">
+          <></>
+        </LabelSection>
+        <LabelSection label="Latest Update">
+          <></>
+        </LabelSection>
+        <LabelSection label="Now Playing">
+          <></>
+        </LabelSection>
+        <LabelSection label="Tech Stack" className="col-span-2">
+          <></>
+        </LabelSection>
       </section>
     </>
   );
