@@ -29,9 +29,9 @@ const PostCard = (props: Props) => {
           variant === "compact" ? "hidden" : undefined
         )}
       >
-        <h2 className="text-2xl font-black mb-1">
+        <h3 className="text-2xl font-black mb-1">
           The Art of Adaptation in a Developer’s Life
-        </h2>
+        </h3>
         <p className="text-lg mb-4 text-muted-foreground">
           Find out how developers can keep up with changing technology and
           enhance their skills.
