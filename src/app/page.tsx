@@ -9,7 +9,7 @@ type Props = {};
 const HomePage = (props: Props) => {
   return (
     <>
-      <section className="container py-24">
+      <section className="container pb-24">
         <Image
           src={"https://media.graphassets.com/Fn8oPxB9Sja74IDWxqtO"}
           alt="Tonmoy Deb"
@@ -34,7 +34,7 @@ const HomePage = (props: Props) => {
         </div>
       </section>
 
-      <section className="container grid grid-cols-3 pb-24 gap-5">
+      <section className="container grid grid-cols-3 gap-5">
         <LabelSection label="Github Activity" className="col-span-2">
           <></>
         </LabelSection>

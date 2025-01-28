@@ -10,7 +10,7 @@ const AppLayout = (props: Props) => {
   return (
     <>
       <Navigation />
-      {children}
+      <main className="py-16">{children}</main>
     </>
   );
 };
