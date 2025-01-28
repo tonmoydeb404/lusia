@@ -4,7 +4,7 @@ const OthersPage = (props: Props) => {
   return (
     <>
       <section className="container mb-16">
-        <h2 className="text-3xl font-bold mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold mb-2">About Me</h2>
         <h3 className="text-lg">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
           laudantium iure! Esse, neque ratione quas corporis repellat dolore
