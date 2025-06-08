@@ -21,9 +21,9 @@ const ThemeBtn = (props: Props) => {
       onClick={toggleTheme}
     >
       {theme === "light" ? (
-        <LucideSun className="!size-5" />
+        <LucideSun className="size-5!" />
       ) : (
-        <LucideMoon className="!size-5" />
+        <LucideMoon className="size-5!" />
       )}
     </Button>
   );

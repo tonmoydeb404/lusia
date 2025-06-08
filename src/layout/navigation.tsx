@@ -27,10 +27,10 @@ const Navigation = (props: Props) => {
     <header className="container flex items-center justify-between py-5">
       <Button
         size={"icon"}
-        variant={"outline"}
+        variant={"outline-solid"}
         className="rounded-full md:hidden"
       >
-        <LucideMenu className="!size-5" />
+        <LucideMenu className="size-5!" />
       </Button>
 
       <NavigationMenu className="max-md:hidden">
@@ -57,7 +57,7 @@ const Navigation = (props: Props) => {
 
       <section className="flex items-center gap-1">
         <Button size={"icon"} variant={"ghost"} className="rounded-full">
-          <LucideSearch className="!size-5" />
+          <LucideSearch className="size-5!" />
         </Button>
         <ThemeBtn />
       </section>

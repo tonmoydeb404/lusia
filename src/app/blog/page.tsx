@@ -37,7 +37,7 @@ export default function BlogPage() {
             "HTML",
             "TailwindCSS",
           ].map((item) => (
-            <Button key={item} variant={"outline"}>
+            <Button key={item} variant={"outline-solid"}>
               <LucideCode /> {item}
             </Button>
           ))}

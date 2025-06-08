@@ -32,7 +32,7 @@ const WorksPage = (props: Props) => {
         ))}
       </section>
 
-      <article className="container max-w-screen-lg prose dark:prose-invert">
+      <article className="container max-w-(--breakpoint-lg) prose dark:prose-invert">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
           explicabo, eligendi unde adipisci aliquid magni incidunt maxime
