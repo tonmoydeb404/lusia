@@ -1,4 +1,4 @@
-export type PageType = {
+export type TPage = {
   title: string;
   description: string;
 };

@@ -1,4 +1,4 @@
-export type MediaType = {
+export type TMedia = {
   url: string;
   alt: string;
 };

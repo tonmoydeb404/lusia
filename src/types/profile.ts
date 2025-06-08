@@ -1,6 +1,6 @@
-import { MediaType } from "./common";
+import { TMedia } from "./common";
 
-export type ProfileType = {
+export type TProfile = {
   name: string;
-  avatar: MediaType;
+  avatar: TMedia;
 };

@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { PageType } from "@/types/page";
-import { ProfileType } from "@/types/profile";
+import { TPage } from "@/types/page";
+import { TProfile } from "@/types/profile";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LucideFile } from "lucide-react";
 import Image from "next/image";
 
 export type HeroSectionProps = {
-  page: PageType;
-  profile: ProfileType;
+  page: TPage;
+  profile: TProfile;
 };
 
 const HeroSection = (props: HeroSectionProps) => {

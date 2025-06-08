@@ -1,10 +1,10 @@
-import { MediaType } from "./common";
+import { TMedia } from "./common";
 
 export type TStackItem = {
   id: string;
   title: string;
   description: string;
-  icon: MediaType;
+  icon: TMedia;
 };
 
 export type TStack = {
