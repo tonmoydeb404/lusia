@@ -27,7 +27,7 @@ const Navigation = (props: Props) => {
     <header className="container flex items-center justify-between py-5">
       <Button
         size={"icon"}
-        variant={"outline-solid"}
+        variant={"outline"}
         className="rounded-full md:hidden"
       >
         <LucideMenu className="size-5!" />
