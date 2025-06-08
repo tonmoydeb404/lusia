@@ -9,7 +9,7 @@ const GithubActivity = (props: Props) => {
   const { theme } = useTheme();
   return (
     <GitHubCalendar
-      username="tonmoydeb404"
+      username={process.env.NEXT_PUBLIC_GITHUB_ID!}
       colorScheme={theme === "dark" ? "dark" : "light"}
       hideColorLegend
       year={new Date().getFullYear()}
