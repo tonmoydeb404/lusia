@@ -5,7 +5,7 @@ import { LucideCode } from "lucide-react";
 export default function BlogPage() {
   return (
     <>
-      <div className="container grid grid-cols-5 gap-4 mt-20">
+      <div className="container grid grid-cols-5 gap-4">
         <div className="col-span-3">
           <PostCard />
         </div>
