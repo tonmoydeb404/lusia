@@ -51,9 +51,9 @@ export const stacks: TStack[] = [
         id: "nestjs",
         title: "NestJS",
         description:
-          "Progressive Node.js framework for building efficient server-side apps.",
+          "Node.js framework for building efficient server-side apps.",
         icon: {
-          url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg",
+          url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
           alt: "NestJS Icon",
         },
       },
