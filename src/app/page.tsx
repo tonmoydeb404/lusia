@@ -28,7 +28,7 @@ const HomePage = (props: Props) => {
           <Button className="rounded-full">
             <LucideFile /> View Resume
           </Button>
-          <Button className="rounded-full" variant={"outline-solid"}>
+          <Button className="rounded-full" variant={"outline"}>
             <SiGithub /> Github
           </Button>
         </div>
