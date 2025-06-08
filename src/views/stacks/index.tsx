@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import ViewHeader from "@/components/common/view-header";
+import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
 import { stacks } from "@/db/stacks";
 
@@ -8,7 +8,7 @@ type Props = {};
 const StacksView = (props: Props) => {
   return (
     <>
-      <ViewHeader
+      <HeaderSection
         title="Stacks"
         description="Tools and technologies I use regularly"
       />

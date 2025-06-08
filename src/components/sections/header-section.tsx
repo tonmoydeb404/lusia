@@ -3,7 +3,7 @@ type Props = {
   description: string;
 };
 
-const ViewHeader = (props: Props) => {
+const HeaderSection = (props: Props) => {
   const { title, description } = props;
   return (
     <section className="container mb-16">
@@ -13,4 +13,4 @@ const ViewHeader = (props: Props) => {
   );
 };
 
-export default ViewHeader;
+export default HeaderSection;
