@@ -5,33 +5,18 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import NavLink from "@/router/nav-link";
-import paths from "@/router/paths";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import { LucideMenu, LucideSearch } from "lucide-react";
+import { LucideSearch } from "lucide-react";
+import { links } from "./config";
+import DrawerNavigation from "./drawer-navigation";
 import ThemeBtn from "./theme-btn";
 
 type Props = {};
 
-const links = [
-  { title: "Home", path: paths.root },
-  { title: "About", path: paths.about },
-  { title: "Work", path: paths.work },
-  { title: "Blog", path: paths.blog.root },
-  { title: "Products", path: paths.products.root },
-  { title: "Stacks", path: paths.stacks },
-  { title: "Contact", path: paths.contact },
-];
-
 const Navigation = (props: Props) => {
   return (
     <header className="container flex items-center justify-between py-5">
-      <Button
-        size={"icon"}
-        variant={"outline"}
-        className="rounded-full md:hidden"
-      >
-        <LucideMenu className="size-5!" />
-      </Button>
+      <DrawerNavigation />
 
       <NavigationMenu className="max-md:hidden">
         <NavigationMenuList className="border rounded-full overflow-hidden px-3">
