@@ -17,7 +17,7 @@ const links = [
   { title: "About", path: paths.about },
   { title: "Work", path: paths.work },
   { title: "Blog", path: paths.blog.root },
-  { title: "Projects", path: paths.projects.root },
+  { title: "Products", path: paths.products.root },
   { title: "Stacks", path: paths.stacks },
   { title: "Contact", path: paths.contact },
 ];

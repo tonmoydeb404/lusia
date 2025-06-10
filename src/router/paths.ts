@@ -4,9 +4,9 @@ const paths = {
   work: "/work",
   stacks: "/stacks",
   contact: "/contact",
-  projects: {
-    root: "/projects",
-    details: (slug: string) => `/projects/${slug}`,
+  products: {
+    root: "/products",
+    details: (slug: string) => `/products/${slug}`,
   },
   blog: {
     root: "/blog",

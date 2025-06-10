@@ -9,6 +9,13 @@ export const homePage: TPage = {
           ut expedita voluptate?`,
 };
 
+export const productsPage: TPage = {
+  slug: "_products",
+  title: "Products",
+  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. In rem,
+          veritatis.`,
+};
+
 export const aboutPage: TPage = {
   slug: "about",
   title: "About Me",
