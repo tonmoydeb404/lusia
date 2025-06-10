@@ -5,7 +5,7 @@ export type TProduct = {
   title: string;
   description: string;
   logo: TMedia;
-  type: "open-source" | "paid" | "freemium";
+  pricingType: "open-source" | "paid" | "freemium";
   liveLink: string;
   sourceLink: string;
   techStack: string[];
