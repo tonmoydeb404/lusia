@@ -1,13 +1,6 @@
-type Props = {};
+import { works } from "@/db/works";
 
-const data = [
-  {
-    company: "HypoMatrix",
-    position: "Sr. Software Engineer",
-    startDate: "2021",
-    endDate: null,
-  },
-];
+type Props = {};
 
 const WorksPage = (props: Props) => {
   return (
@@ -20,13 +13,13 @@ const WorksPage = (props: Props) => {
       </section>
 
       <section className="container mb-16">
-        {data.map((item, index) => (
-          <div key={index} className="flex items-center gap-2">
+        {works.map((item) => (
+          <div key={item.id} className="flex items-center gap-2">
             <h4 className="text-base font-medium">{item.position},</h4>
             <h5 className="text-muted-foreground">{item.company}</h5>
             <div className="flex-1 border-b border-dashed mx-2" />
             <span className="text-sm text-muted-foreground">
-              {item.startDate} - {item.endDate ?? "Present"}
+              {item.startYear} - {item.endYear ?? "Present"}
             </span>
           </div>
         ))}
