@@ -8,4 +8,6 @@ export const profile: TCMSProfile = {
   },
   contacts: [],
   socials: [],
+  featuredStacks: [],
+  ongoingProduct: undefined,
 };

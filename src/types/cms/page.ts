@@ -1,3 +1,5 @@
+import { TCMSMetaSEO } from "./components";
+
 export type TCMSPage = {
   title: string;
   description: string;
@@ -5,4 +7,5 @@ export type TCMSPage = {
   content?: {
     html: string;
   };
+  metaSeo?: TCMSMetaSEO;
 };

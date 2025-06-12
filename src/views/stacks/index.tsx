@@ -32,9 +32,9 @@ const StacksView = (props: Props) => {
                   <section>
                     <div className="flex items-center gap-2 mb-1">
                       <h4 className="text-base font-bold">{item.title}</h4>{" "}
-                      {item.level ? (
+                      {item.skillLevel ? (
                         <Badge variant={"outline"} className="text-xs">
-                          {item.level}
+                          {item.skillLevel}
                         </Badge>
                       ) : null}
                     </div>

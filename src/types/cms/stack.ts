@@ -1,6 +1,6 @@
 import { TCMSMedia } from "./common";
 
-export enum CMSStackItemLevelEnum {
+export enum CMSStackSkillLevelEnum {
   "BEGINNER" = "BEGINNER",
   "INTERMEDIATE" = "INTERMEDIATE",
   "ADVANCED" = "ADVANCED",
@@ -12,7 +12,7 @@ export type TCMSStackItem = {
   title: string;
   description: string;
   icon: TCMSMedia;
-  level: CMSStackItemLevelEnum | null;
+  skillLevel: CMSStackSkillLevelEnum | null;
 };
 
 export type TCMSStack = {

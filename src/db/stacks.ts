@@ -1,4 +1,4 @@
-import { CMSStackItemLevelEnum, TCMSStack } from "@/types/cms/stack";
+import { CMSStackSkillLevelEnum, TCMSStack } from "@/types/cms/stack";
 
 export const stacks: TCMSStack[] = [
   {
@@ -13,7 +13,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
           alt: "HTML5 Icon",
         },
-        level: null,
+        skillLevel: null,
       },
       {
         id: "css",
@@ -23,7 +23,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
           alt: "CSS3 Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
       {
         id: "react",
@@ -33,7 +33,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
           alt: "React Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
     ],
   },
@@ -49,7 +49,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
           alt: "Node.js Icon",
         },
-        level: null,
+        skillLevel: null,
       },
       {
         id: "nestjs",
@@ -60,7 +60,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
           alt: "NestJS Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
     ],
   },
@@ -76,7 +76,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
           alt: "MongoDB Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
       {
         id: "postgresql",
@@ -86,7 +86,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
           alt: "PostgreSQL Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
     ],
   },
@@ -102,7 +102,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
           alt: "Docker Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
       {
         id: "git",
@@ -112,7 +112,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
           alt: "Git Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
       {
         id: "github",
@@ -122,7 +122,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
           alt: "GitHub Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
     ],
   },
@@ -138,7 +138,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
           alt: "Linux Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
       {
         id: "nginx",
@@ -148,7 +148,7 @@ export const stacks: TCMSStack[] = [
           url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
           alt: "NGINX Icon",
         },
-        level: CMSStackItemLevelEnum.ADVANCED,
+        skillLevel: CMSStackSkillLevelEnum.ADVANCED,
       },
     ],
   },

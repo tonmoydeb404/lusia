@@ -4,3 +4,11 @@ export type TCMSLinkComponent = {
   newTab: boolean;
   ref: string | null;
 };
+
+export type TCMSMetaSEO = {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  index?: boolean;
+  follow?: boolean;
+};
