@@ -43,42 +43,6 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-
-      <footer className="mt-52 container grid grid-cols-4 gap-4">
-        <div className="col-span-2 pr-16">
-          <h2 className="text-lg font-bold mb-2">Tonmoy Deb</h2>
-          <p className="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            repudiandae quas mollitia enim delectus aperiam dolorum! Itaque hic
-            optio quia.
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-sm font-bold mb-4 text-muted-foreground">
-            Pages
-          </h3>
-
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Projects</li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-sm font-bold mb-4 text-muted-foreground">
-            Resources
-          </h3>
-
-          <ul className="flex flex-col gap-2 text-sm">
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Projects</li>
-          </ul>
-        </div>
-      </footer>
     </>
   );
 }
