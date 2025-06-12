@@ -1,6 +1,9 @@
-import { TMedia } from "./common";
+import { TCMSMedia } from "./common";
+import { TCMSLinkComponent } from "./components";
 
-export type TProfile = {
+export type TCMSProfile = {
   name: string;
-  avatar: TMedia;
+  avatar: TCMSMedia;
+  contacts: TCMSLinkComponent[];
+  socials: TCMSLinkComponent[];
 };

@@ -1,4 +1,4 @@
-export type TPage = {
+export type TCMSPage = {
   title: string;
   description: string;
   slug: string;

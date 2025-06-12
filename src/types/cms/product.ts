@@ -1,16 +1,18 @@
-import { TMedia } from "./common";
+import { TCMSMedia } from "./common";
 
-export type TProduct = {
+export enum CMSProductPricingTypeEnum {
+  "OPEN_SOURCE",
+  "PAID",
+  "FREEMIUM",
+}
+
+export type TCMSProduct = {
   id: string;
   title: string;
   description: string;
-  logo: TMedia;
-  pricingType: "open-source" | "paid" | "freemium";
+  slug: string;
+  logo: TCMSMedia;
+  pricingType: CMSProductPricingTypeEnum;
   liveLink: string;
   sourceLink: string;
-  techStack: string[];
-  slug: string;
-  content?: {
-    html: string;
-  };
 };

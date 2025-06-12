@@ -1,14 +1,22 @@
-import { TMedia } from "./common";
+import { TCMSMedia } from "./common";
 
-export type TStackItem = {
+export enum CMSStackItemLevelEnum {
+  "BEGINNER",
+  "INTERMEDIATE",
+  "ADVANCED",
+  "EXPERT",
+}
+
+export type TCMSStackItem = {
   id: string;
   title: string;
   description: string;
-  icon: TMedia;
+  icon: TCMSMedia;
+  level: CMSStackItemLevelEnum | null;
 };
 
-export type TStack = {
+export type TCMSStack = {
   id: string;
   title: string;
-  items: TStackItem[];
+  items: TCMSStackItem[];
 };

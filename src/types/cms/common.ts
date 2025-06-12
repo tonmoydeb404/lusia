@@ -1,4 +1,4 @@
-export type TMedia = {
+export type TCMSMedia = {
   url: string;
   alt: string;
 };
