@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { TPage } from "@/types/page";
-import { TProfile } from "@/types/profile";
+import { TCMSPage } from "@/types/cms/page";
+import { TCMSProfile } from "@/types/cms/profile";
+
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LucideFile } from "lucide-react";
 import Image from "next/image";
 
 export type HeroSectionProps = {
-  page: TPage;
-  profile: TProfile;
+  page: TCMSPage;
+  profile: TCMSProfile;
 };
 
 const HeroSection = (props: HeroSectionProps) => {

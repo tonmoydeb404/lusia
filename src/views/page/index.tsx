@@ -1,8 +1,8 @@
 import HeaderSection from "@/components/sections/header-section";
-import { TPage } from "@/types/page";
+import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
-  pageData: TPage;
+  pageData: TCMSPage;
 };
 
 const PageView = (props: Props) => {

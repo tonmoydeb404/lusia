@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
+import { Badge } from "@/components/ui/badge";
 import { stacks } from "@/db/stacks";
 
 type Props = {};
@@ -29,7 +30,14 @@ const StacksView = (props: Props) => {
                     />
                   </div>
                   <section>
-                    <h4 className="text-base font-bold">{item.title}</h4>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="text-base font-bold">{item.title}</h4>{" "}
+                      {item.level ? (
+                        <Badge variant={"outline"} className="text-xs">
+                          {item.level}
+                        </Badge>
+                      ) : null}
+                    </div>
                     <p className="text-sm text-muted-foreground">
                       {item.description}
                     </p>

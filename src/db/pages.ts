@@ -1,71 +1,61 @@
-import { TPage } from "@/types/page";
+import { TCMSPage } from "@/types/cms/page";
 
-export const homePage: TPage = {
+export const homePage: TCMSPage = {
   slug: "_home",
-  title: "Hello, I'm Jhon Doe",
-  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. In rem,
-          veritatis placeat possimus saepe sunt corporis obcaecati vel illo
-          voluptatum veniam fugiat numquam eligendi tempore, dolorum asperiores
-          ut expedita voluptate?`,
+  title: "Hello, I'm Tonmoy Deb",
+  description: `I design and build digital products with purpose — from AI tools to video tech and productivity systems. My focus is always on solving real problems, not chasing shiny tech.`,
 };
 
-export const productsPage: TPage = {
+export const productsPage: TCMSPage = {
   slug: "_products",
   title: "Products",
-  description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. In rem,
-          veritatis.`,
+  description: `A collection of digital products I've crafted — from AI-powered tools to real-time video apps. Each one is built with purpose, solving real-world problems through thoughtful design and engineering.`,
 };
 
-export const aboutPage: TPage = {
+export const aboutPage: TCMSPage = {
   slug: "about",
   title: "About Me",
-  description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, laudantium iure! Esse, neque ratione quas corporis repellat dolore expedita nihil.",
+  description: `I'm Tonmoy Deb — a self-taught developer from Bangladesh who loves building purposeful web experiences. I focus on solving real problems through clean, usable, and thoughtful digital products.`,
   content: {
-    html: `<p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
-          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
-          error architecto similique soluta nostrum aliquid repellendus odit. Ea
-          alias fugit, explicabo cumque enim iusto magnam praesentium doloribus.
-          Saepe, suscipit? Quisquam eius dolor at minus. Lorem ipsum dolor sit,
-          amet consectetur adipisicing elit. Voluptatibus eveniet dolores qui.
-          Neque, iure nihil. Dolore, deleniti quae. Iste, possimus vero
-          voluptatem voluptatum aliquam necessitatibus iure sapiente? Aliquam,
-          rem dignissimos?
-        </p>
+    html: `
+    <p>
+      Hey, I’m Tonmoy Deb — a self-taught web developer from Bangladesh, passionate about building clean, functional, and user-focused applications. I started with frontend development, crafting responsive interfaces using JavaScript, React, and Next.js, and later dove deeper into backend technologies like Node.js, Express, and NestJS.
+    </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
-          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
-          error architecto similique soluta nostrum aliquid repellendus odit. Ea
-          alias fugit, explicabo cumque enim iusto magnam praesentium doloribus.
-          Saepe, suscipit? Quisquam eius dolor at minus.
-        </p>
+    <p>
+      I enjoy solving real problems more than chasing trends. Over time, my interests expanded to include database systems like MongoDB and PostgreSQL, working with TypeScript, and experimenting with tools like Dexie.js and FFmpeg to push my limits.
+    </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
-          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
-          error architecto similique soluta nostrum aliquid repellendus odit. Ea
-          alias fugit, explicabo cumque enim iusto magnam praesentium doloribus.
-          Saepe, suscipit? Quisquam eius dolor at minus. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Harum, dolorem distinctio numquam
-          omnis exercitationem velit quis quod sunt cupiditate perspiciatis
-          consectetur saepe dolor labore ratione veritatis nihil doloremque
-          quia, aliquam fuga. Obcaecati, est? Nulla quis repellat, blanditiis
-          doloribus illum dolorem quibusdam voluptate, officia vero sequi nobis!
-          Impedit consequatur odio reiciendis!
-        </p>
+    <p>
+      Right now, I’m building projects that blend AI, video technology, and productivity — tools that actually help people get things done. Whether it's creating a virtual camera, a blog-to-podcast system, or a database schema designer, I approach each project with curiosity and focus.
+    </p>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
-          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
-          error architecto similique soluta nostrum aliquid repellendus odit. Ea
-          alias fugit, explicabo cumque enim iusto magnam praesentium doloribus.
-          Saepe, suscipit? Quisquam eius dolor at minus.
-        </p>`,
+    <p>
+      My toolbox includes VS Code, Linux Mint, GitHub, and a bunch of open-source tools that help me stay productive. I'm constantly learning, iterating, and refining both my craft and mindset.
+    </p>
+
+    <p>
+      Outside of code, I enjoy reading, exploring new ideas, and occasionally getting lost in design. I believe in learning by building, and I’m always open to collaboration or a good tech conversation.
+    </p>
+
+    <h3>Let’s Connect</h3>
+    <ul>
+      <li><strong>GitHub:</strong> <a href="https://github.com/tonmoydeb404" target="_blank">@tonmoydeb404</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/tonmoydeb" target="_blank">@tonmoydeb</a></li>
+      <li><strong>Facebook:</strong> <a href="https://facebook.com/tonmoydeb" target="_blank">@tonmoydeb</a></li>
+      <li><strong>Portfolio:</strong> <a href="https://tonmoydeb.com" target="_blank">tonmoydeb.com</a></li>
+    </ul>
+
+    <h3>Contact</h3>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:mail@tonmoydeb.com">mail@tonmoydeb.com</a></li>
+      <li><strong>Alternate:</strong> <a href="mailto:tonmoydeb404@gmail.com">tonmoydeb404@gmail.com</a></li>
+      <li><strong>Phone / WhatsApp:</strong> +8801571362609</li>
+    </ul>
+
+    <p>
+      If you have an idea, a challenge, or just want to chat — feel free to reach out. Let's build something meaningful together.
+    </p>
+    `,
   },
 };

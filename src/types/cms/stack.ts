@@ -1,10 +1,10 @@
 import { TCMSMedia } from "./common";
 
 export enum CMSStackItemLevelEnum {
-  "BEGINNER",
-  "INTERMEDIATE",
-  "ADVANCED",
-  "EXPERT",
+  "BEGINNER" = "BEGINNER",
+  "INTERMEDIATE" = "INTERMEDIATE",
+  "ADVANCED" = "ADVANCED",
+  "EXPERT" = "EXPERT",
 }
 
 export type TCMSStackItem = {

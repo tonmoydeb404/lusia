@@ -1,11 +1,11 @@
 import ProductCard from "@/components/cards/product-card";
 import HeaderSection from "@/components/sections/header-section";
-import { TPage } from "@/types/page";
-import { TProduct } from "@/types/product";
+import { TCMSPage } from "@/types/cms/page";
+import { TCMSProduct } from "@/types/cms/product";
 
 type Props = {
-  pageData: TPage;
-  data: TProduct[];
+  pageData: TCMSPage;
+  data: TCMSProduct[];
 };
 
 const ProductsView = (props: Props) => {

@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from "@/components/ui/badge";
-import { TProduct } from "@/types/product";
+import { TCMSProduct } from "@/types/cms/product";
 
 type Props = {
-  product: TProduct;
+  product: TCMSProduct;
 };
 
 const ProductCard = (props: Props) => {

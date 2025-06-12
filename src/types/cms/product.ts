@@ -1,16 +1,15 @@
 import { TCMSMedia } from "./common";
 
 export enum CMSProductPricingTypeEnum {
-  "OPEN_SOURCE",
-  "PAID",
-  "FREEMIUM",
+  "OPEN_SOURCE" = "OPEN_SOURCE",
+  "PAID" = "PAID",
+  "FREEMIUM" = "FREEMIUM",
 }
 
 export type TCMSProduct = {
   id: string;
   title: string;
   description: string;
-  slug: string;
   logo: TCMSMedia;
   pricingType: CMSProductPricingTypeEnum;
   liveLink: string;
