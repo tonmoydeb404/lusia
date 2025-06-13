@@ -1,4 +1,4 @@
-import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/product";
+import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/db/product";
 
 const products: TCMSProduct[] = [
   {

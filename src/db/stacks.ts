@@ -1,4 +1,4 @@
-import { CMSStackSkillLevelEnum, TCMSStack } from "@/types/cms/stack";
+import { CMSStackSkillLevelEnum, TCMSStack } from "@/types/cms/db/stack";
 
 export const stacks: TCMSStack[] = [
   {

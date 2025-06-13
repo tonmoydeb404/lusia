@@ -1,7 +1,7 @@
 import ProductCard from "@/components/cards/product-card";
 import HeaderSection from "@/components/sections/header-section";
-import { TCMSPage } from "@/types/cms/page";
-import { TCMSProduct } from "@/types/cms/product";
+import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSProduct } from "@/types/cms/db/product";
 
 type Props = {
   pageData: TCMSPage;

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { TCMSPage } from "@/types/cms/page";
-import { TCMSProfile } from "@/types/cms/profile";
+import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSProfile } from "@/types/cms/db/profile";
 
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { LucideFile } from "lucide-react";

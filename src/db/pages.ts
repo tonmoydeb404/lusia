@@ -1,4 +1,4 @@
-import { TCMSPage } from "@/types/cms/page";
+import { TCMSPage } from "@/types/cms/db/page";
 
 export const homePage: TCMSPage = {
   slug: "_home",

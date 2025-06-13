@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from "@/components/ui/badge";
-import { TCMSProduct } from "@/types/cms/product";
+import { TCMSProduct } from "@/types/cms/db/product";
 
 type Props = {
   product: TCMSProduct;

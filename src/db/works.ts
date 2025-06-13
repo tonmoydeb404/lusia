@@ -1,4 +1,4 @@
-import { TCMSWork } from "@/types/cms/work";
+import { TCMSWork } from "@/types/cms/db/work";
 
 export const works: TCMSWork[] = [
   {

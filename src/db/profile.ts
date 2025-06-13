@@ -1,4 +1,4 @@
-import { TCMSProfile } from "@/types/cms/profile";
+import { TCMSProfile } from "@/types/cms/db/profile";
 
 export const profile: TCMSProfile = {
   name: "Tonmoy Deb",
