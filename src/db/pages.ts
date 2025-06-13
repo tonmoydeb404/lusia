@@ -59,3 +59,28 @@ export const aboutPage: TCMSPage = {
     `,
   },
 };
+
+export const blogPage: TCMSPage = {
+  title: "Recent Articles",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo",
+  slug: "_blog",
+  content: {
+    html: `
+    <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
+          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+          explicabo, eligendi unde adipisci aliquid magni incidunt maxime
+          aperiam deserunt, sapiente quaerat nostrum! Quaerat id perferendis
+          error architecto similique soluta nostrum aliquid repellendus odit. Ea
+          alias fugit, explicabo cumque enim iusto magnam praesentium doloribus.
+          Saepe, suscipit? Quisquam eius dolor at minus.
+        </p>
+    `,
+  },
+};

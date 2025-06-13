@@ -3,4 +3,5 @@ export type THNPost = {
   brief: string;
   slug: string;
   url: string;
+  publishedAt: string;
 };
