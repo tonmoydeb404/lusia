@@ -1,9 +1,17 @@
-import { BiLogoGithub, BiLogoLinkedin, BiLogoWhatsapp } from "react-icons/bi";
-import { LuFile, LuGlobe } from "react-icons/lu";
+import {
+  BiLogoDiscordAlt,
+  BiLogoGithub,
+  BiLogoLinkedin,
+  BiLogoWhatsapp,
+} from "react-icons/bi";
+import { LuAtSign, LuFile, LuGlobe } from "react-icons/lu";
 
 export const icons = {
   resume: LuFile,
+  email: LuAtSign,
+
   // socials
+  discord: BiLogoDiscordAlt,
   github: BiLogoGithub,
   linkedin: BiLogoLinkedin,
   whatsapp: BiLogoWhatsapp,
