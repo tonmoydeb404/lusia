@@ -1,9 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/db/product";
-import { LucideExternalLink, LucideGitBranch } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { LuExternalLink, LuGitBranch } from "react-icons/lu";
 
 type Props = {
   product: TCMSProduct;
@@ -37,14 +37,14 @@ const ProductCard = (props: Props) => {
         {product.liveLink && (
           <Button size={"icon"} variant={"secondary"} asChild>
             <Link href={product.liveLink} target="_blank">
-              <LucideExternalLink />
+              <LuExternalLink />
             </Link>
           </Button>
         )}
         {product.sourceLink && (
           <Button size={"icon"} variant={"outline"} asChild>
             <Link href={product.sourceLink} target="_blank">
-              <LucideGitBranch />
+              <LuGitBranch />
             </Link>
           </Button>
         )}

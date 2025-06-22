@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { ContactFormData, ContactFormSchema } from "@/schemas/contact-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { LucideSend } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { LuSend } from "react-icons/lu";
 
 type Props = {};
 
@@ -49,7 +49,7 @@ const ContactForm = (props: Props) => {
         />
 
         <Button className="mt-10">
-          Send Message <LucideSend />
+          Send Message <LuSend />
         </Button>
       </form>
     </Form>

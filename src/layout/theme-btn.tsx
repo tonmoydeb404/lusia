@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { LucideMoon, LucideSun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { LuMoon, LuSun } from "react-icons/lu";
 
 type Props = {};
 
@@ -21,9 +21,9 @@ const ThemeBtn = (props: Props) => {
       onClick={toggleTheme}
     >
       {theme === "light" ? (
-        <LucideSun className="size-5!" />
+        <LuSun className="size-5!" />
       ) : (
-        <LucideMoon className="size-5!" />
+        <LuMoon className="size-5!" />
       )}
     </Button>
   );

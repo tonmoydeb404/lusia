@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import NavLink from "@/router/nav-link";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import { LucideSearch } from "lucide-react";
+import { LuSearch } from "react-icons/lu";
 import { links } from "./config";
 import DrawerNavigation from "./drawer-navigation";
 import ThemeBtn from "./theme-btn";
@@ -42,7 +42,7 @@ const Navigation = (props: Props) => {
 
       <section className="flex items-center gap-1">
         <Button size={"icon"} variant={"ghost"} className="rounded-full">
-          <LucideSearch className="size-5!" />
+          <LuSearch className="size-5!" />
         </Button>
         <ThemeBtn />
       </section>
