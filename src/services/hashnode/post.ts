@@ -2,7 +2,7 @@ import { CacheTags } from "@/common/cache";
 import envConfig from "@/common/env-config";
 import { THNPost } from "@/types/hashnode/db/post.type";
 import { hashnodeRequest } from "../common";
-import { fetchPostsQuery } from "./post.query";
+import { fetchPostPinnedQuery, fetchPostsQuery } from "./post.query";
 
 type PublicationResponse = {
   publication: {
@@ -13,7 +13,7 @@ type PublicationResponse = {
   };
 };
 
-export async function fetchHashnodePosts() {
+export async function fetchPosts() {
   try {
     const data = await hashnodeRequest<PublicationResponse>(
       fetchPostsQuery,
@@ -24,5 +24,26 @@ export async function fetchHashnodePosts() {
   } catch (error) {
     console.error("Error fetching posts:", error);
     return [];
+  }
+}
+
+type PinnedPostResponse = {
+  publication: {
+    id: string;
+    pinnedPost: THNPost | null;
+  };
+};
+
+export async function fetchPostPinned() {
+  try {
+    const data = await hashnodeRequest<PinnedPostResponse>(
+      fetchPostPinnedQuery,
+      { host: envConfig.HASHNODE_URL },
+      [CacheTags.HN_POSTS]
+    );
+    return data.publication.pinnedPost;
+  } catch (error) {
+    console.error("Error fetching post pinned:", error);
+    return null;
   }
 }

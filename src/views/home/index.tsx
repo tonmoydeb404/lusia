@@ -2,7 +2,7 @@ import { TCMSPage } from "@/types/cms/db/page";
 import { TCMSProfile } from "@/types/cms/db/profile";
 import GithubActivity from "./github-activity";
 import HeroSection from "./hero-section";
-import LastArticle from "./last-article";
+import PinnedArticle from "./pinned-article";
 import RecentActivity from "./recent-activity";
 import TechStack from "./tech-stack";
 
@@ -26,7 +26,7 @@ const HomeView = (props: Props) => {
           <RecentActivity product={profile.ongoingProduct} />
         </div>
         <div className="order-1 md:order-0">
-          <LastArticle />
+          <PinnedArticle />
         </div>
         <div className="md:col-span-2">
           <TechStack stackItems={profile.stackItems} />
