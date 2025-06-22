@@ -9,10 +9,7 @@ type Props = {
 const StackItemCard = (props: Props) => {
   const { data } = props;
   return (
-    <article
-      key={data.id}
-      className="flex items-start p-3 gap-x-4 hover:bg-accent rounded-xl duration-200"
-    >
+    <article key={data.id} className="flex items-start p-3 gap-x-4 rounded-xl">
       <div className="shrink-0 size-8 md:size-10 inline-flex items-center justify-center bg-accent rounded-md">
         <Image
           src={data.logo.url}
