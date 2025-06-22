@@ -3,20 +3,21 @@ import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
 import { Badge } from "@/components/ui/badge";
 import { fetchProfile } from "@/services/cms/profile";
+import { TCMSPage } from "@/types/cms/db/page";
 import Link from "next/link";
 import ContactForm from "./contact-form";
 
-type Props = {};
+type Props = {
+  page: TCMSPage;
+};
 
 const ContactView = async (props: Props) => {
+  const { page } = props;
   const profileRes = await fetchProfile();
 
   return (
     <>
-      <HeaderSection
-        title="Contact Me"
-        description="Let me know what's on your mind and I'll get back to you as soon as possible."
-      >
+      <HeaderSection title={page.title} description={page.description}>
         <div className="flex items-center flex-wrap gap-1.5 mt-3">
           {profileRes?.socials.map((item) => {
             const Icon = getIcon(item.ref);

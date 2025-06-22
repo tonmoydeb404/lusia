@@ -2,18 +2,19 @@ import StackItemCard from "@/components/cards/stack-item-card";
 import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
 import { fetchStacks } from "@/services/cms/stack";
+import { TCMSPage } from "@/types/cms/db/page";
 
-type Props = {};
+type Props = {
+  page: TCMSPage;
+};
 
 const StacksView = async (props: Props) => {
+  const { page } = props;
   const stacksRes = await fetchStacks();
 
   return (
     <>
-      <HeaderSection
-        title="Stacks"
-        description="Tools and technologies I use regularly"
-      />
+      <HeaderSection title={page.title} description={page.description} />
       <section className="container space-y-8">
         {stacksRes.map((item) => (
           <LabelSection label={item.title} key={item.id}>

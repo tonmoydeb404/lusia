@@ -8,4 +8,5 @@ export type TCMSPage = {
     html: string;
   };
   metaSeo?: TCMSMetaSEO;
+  isCustomPage: boolean;
 };
