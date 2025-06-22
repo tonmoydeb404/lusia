@@ -11,8 +11,8 @@ export type TCMSStackItem = {
   id: string;
   title: string;
   description: string;
-  icon: TCMSMedia;
-  skillLevel: CMSStackSkillLevelEnum | null;
+  logo: TCMSMedia;
+  level: CMSStackSkillLevelEnum | null;
 };
 
 export type TCMSStack = {

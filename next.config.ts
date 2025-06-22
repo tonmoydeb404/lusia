@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { hostname: "cdn.hashnode.com" },
       { hostname: "media.graphassets.com" },
+      { hostname: "ap-south-1.graphassets.com" },
     ],
+    dangerouslyAllowSVG: true,
   },
 };
 

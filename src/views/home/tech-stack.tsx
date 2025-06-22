@@ -18,8 +18,8 @@ const TechStack = (props: Props) => {
       ].map((item) => (
         <div key={item.id} className="p-2 border rounded-lg">
           <img
-            src={item.icon.url}
-            alt={item.icon.alt || item.title}
+            src={item.logo.url}
+            alt={item.logo.alt || item.title}
             width={30}
           />
         </div>
