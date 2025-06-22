@@ -10,4 +10,5 @@ export type TCMSProfile = {
   socials: TCMSLinkComponent[];
   stackItems: TCMSStackItem[];
   ongoingProduct?: TCMSProduct;
+  callToActions: TCMSLinkComponent[];
 };

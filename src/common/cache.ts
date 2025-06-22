@@ -3,4 +3,5 @@ export enum CacheTags {
 
   CMS_STACKS = "CMS_STACKS",
   CMS_PRODUCTS = "CMS_PRODUCTS",
+  CMS_PROFILE = "CMS_PROFILE",
 }

@@ -1,13 +1,20 @@
 import { homePage } from "@/db/pages";
-import { profile } from "@/db/profile";
+import { fetchProfile } from "@/services/cms/profile";
 import HomeView from "@/views/home";
+import { notFound } from "next/navigation";
 
 type Props = {};
 
-const HomePage = (props: Props) => {
+const HomePage = async (props: Props) => {
+  const profileRes = await fetchProfile();
+
+  if (!profileRes) {
+    notFound();
+  }
+
   return (
     <>
-      <HomeView page={homePage} profile={profile} />
+      <HomeView page={homePage} profile={profileRes} />
     </>
   );
 };
