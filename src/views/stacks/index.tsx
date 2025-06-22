@@ -14,7 +14,7 @@ const StacksView = async (props: Props) => {
         title="Stacks"
         description="Tools and technologies I use regularly"
       />
-      <section className="container space-y-5">
+      <section className="container space-y-8">
         {stacksRes.map((item) => (
           <LabelSection label={item.title} key={item.id}>
             <section className="grid grid-cols-1 md:grid-cols-2 p-1 sm:p-2 gap-2">
