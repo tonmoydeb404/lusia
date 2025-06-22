@@ -39,7 +39,7 @@ export async function fetchPostPinned() {
     const data = await hashnodeRequest<PinnedPostResponse>(
       fetchPostPinnedQuery,
       { host: envConfig.HASHNODE_URL },
-      [CacheTags.HN_POSTS]
+      [CacheTags.HN_PINNED]
     );
     return data.publication.pinnedPost;
   } catch (error) {

@@ -1,7 +1,7 @@
 const paths = {
   root: "/",
   about: "/about",
-  work: "/work",
+  works: "/works",
   stacks: "/stacks",
   contact: "/contact",
   products: {
