@@ -20,7 +20,7 @@ const BlogView = (props: Props) => {
         description={pageData.description}
       />
 
-      <section className="container mb-16 space-y-6">
+      <section className="container mb-16 space-y-8">
         {postsData.map((item) => (
           <PostCard key={item.slug} data={item} />
         ))}
