@@ -21,7 +21,7 @@ const StackItemCard = (props: Props) => {
       </div>
       <section>
         <div className="flex items-center gap-2 mb-1">
-          <h4 className="text-base font-bold">{data.title}</h4>{" "}
+          <h3 className="text-base font-bold">{data.title}</h3>{" "}
           {data.level ? (
             <Badge
               variant={"secondary"}

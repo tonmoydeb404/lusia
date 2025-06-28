@@ -43,8 +43,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const profileRes = await fetchProfile();
   const pageRes = await fetchPage("home");
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
+  return metaSeoToMetadata(pageRes, {
     authors: { name: profileRes?.name },
     category: "Portfolio",
     creator: profileRes?.name,

@@ -26,7 +26,5 @@ export default StacksPage;
 export const generateMetadata = async () => {
   const pageRes = await fetchPage("stacks");
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
-  });
+  return metaSeoToMetadata(pageRes);
 };

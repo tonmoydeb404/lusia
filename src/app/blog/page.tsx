@@ -24,7 +24,5 @@ export default BlogPage;
 export const generateMetadata = async () => {
   const pageRes = await fetchPage("blog");
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
-  });
+  return metaSeoToMetadata(pageRes);
 };

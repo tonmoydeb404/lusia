@@ -42,7 +42,5 @@ export const generateMetadata = async (props: Props) => {
   const { slug } = await props.params;
   const pageRes = await fetchPage(slug);
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
-  });
+  return metaSeoToMetadata(pageRes);
 };

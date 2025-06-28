@@ -1,17 +1,25 @@
-import { TCMSMetaSEO } from "@/types/cms/components";
+import envConfig from "@/common/env-config";
+import { TCMSPage } from "@/types/cms/page";
 import { Metadata } from "next";
 import { deepMerge } from "./object";
 
 export const metaSeoToMetadata = (
-  metaSeo: TCMSMetaSEO = {},
+  page: TCMSPage | null,
   metadata: Metadata = {}
 ): Metadata => {
+  if (!page) return {};
+
+  const { metaSeo, slug } = page;
+
+  const url =
+    slug === "home" ? envConfig.BASE_URL : `${envConfig.BASE_URL}/${slug}`;
+
   return deepMerge<Metadata, Metadata>(
     {
       title: metaSeo?.title,
       description: metaSeo?.description,
       alternates: {
-        canonical: metaSeo?.canonicalUrl,
+        canonical: metaSeo?.canonicalUrl ?? url,
       },
       robots: {
         index: metaSeo?.index,
@@ -20,6 +28,8 @@ export const metaSeoToMetadata = (
       openGraph: {
         title: metaSeo?.title,
         description: metaSeo?.description,
+        type: "website",
+        url,
         images: metaSeo?.image
           ? {
               url: metaSeo.image.url,

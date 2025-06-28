@@ -29,7 +29,5 @@ export default HomePage;
 export const generateMetadata = async (): Promise<Metadata> => {
   const pageRes = await fetchPage("home");
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
-  });
+  return metaSeoToMetadata(pageRes);
 };

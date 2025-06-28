@@ -26,7 +26,5 @@ export default WorksPage;
 export const generateMetadata = async () => {
   const pageRes = await fetchPage("works");
 
-  return metaSeoToMetadata(pageRes?.metaSeo, {
-    openGraph: { type: "website" },
-  });
+  return metaSeoToMetadata(pageRes);
 };

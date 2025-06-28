@@ -19,7 +19,7 @@ const HeroSection = async (props: Props) => {
           className="mb-7 rounded-full"
         />
       )}
-      <h2 className="text-4xl font-bold mb-2">{page.title}</h2>
+      <h1 className="text-4xl font-bold mb-2">{page.title}</h1>
       <p className="text-lg mb-10">{page.description}</p>
       <div className="flex justify-between flex-col sm:flex-row sm:items-center gap-5">
         <div className="flex items-center flex-wrap gap-2">
