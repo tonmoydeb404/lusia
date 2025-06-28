@@ -9,8 +9,8 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { LucideMenu } from "lucide-react";
 import Link from "next/link";
+import { LuMenu } from "react-icons/lu";
 import { links } from "./config";
 
 type Props = {};
@@ -24,7 +24,7 @@ const DrawerNavigation = (props: Props) => {
           variant={"outline"}
           className="rounded-full md:hidden"
         >
-          <LucideMenu className="size-5!" />
+          <LuMenu className="size-5!" />
         </Button>
       </DrawerTrigger>
       <DrawerContent>

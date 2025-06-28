@@ -16,3 +16,18 @@ export const fetchPostsQuery = `
     }
   }
 `;
+
+export const fetchPostPinnedQuery = `
+query Publication($host: String = "tonmoydeb.hashnode.dev") {
+  publication(host: $host) {
+    id
+    pinnedPost {
+      title
+      brief
+      slug
+      url
+      publishedAt
+    }
+  }
+}
+`;

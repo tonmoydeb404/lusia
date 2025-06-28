@@ -1,12 +1,19 @@
+import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSProfile } from "@/types/cms/db/profile";
 import GithubActivity from "./github-activity";
-import HeroSection, { HeroSectionProps } from "./hero-section";
-import LastArticle from "./last-article";
+import HeroSection from "./hero-section";
+import PinnedArticle from "./pinned-article";
 import RecentActivity from "./recent-activity";
 import TechStack from "./tech-stack";
 
-type Props = {} & HeroSectionProps;
+export type Props = {
+  page: TCMSPage;
+  profile: TCMSProfile;
+};
 
 const HomeView = (props: Props) => {
+  const { profile } = props;
+
   return (
     <>
       <HeroSection {...props} />
@@ -16,13 +23,13 @@ const HomeView = (props: Props) => {
           <GithubActivity />
         </div>
         <div>
-          <RecentActivity />
+          <RecentActivity product={profile.ongoingProduct} />
         </div>
-        <div>
-          <LastArticle />
+        <div className="order-1 md:order-0">
+          <PinnedArticle />
         </div>
         <div className="md:col-span-2">
-          <TechStack />
+          <TechStack stackItems={profile.stackItems} />
         </div>
       </section>
     </>

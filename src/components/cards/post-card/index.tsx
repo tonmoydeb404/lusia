@@ -17,7 +17,7 @@ const PostCard = (props: Props) => {
           </Link>
         </h4>
         {/* <h5 className="text-muted-foreground">{item.company}</h5> */}
-        <div className="flex-1 border-b border-dashed mx-2 max-sm:hidden" />
+        <div className="flex-1 border-b border-dashed mx-2 border-gray-300 dark:border-gray-700 max-sm:hidden" />
         <span className="text-sm text-muted-foreground">
           {new Date(data.publishedAt).toLocaleDateString()}
         </span>

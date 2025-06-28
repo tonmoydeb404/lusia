@@ -1,48 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
+import StackItemCard from "@/components/cards/stack-item-card";
 import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
-import { Badge } from "@/components/ui/badge";
-import { stacks } from "@/db/stacks";
+import { fetchStacks } from "@/services/cms/stack";
+import { TCMSPage } from "@/types/cms/db/page";
 
-type Props = {};
+type Props = {
+  page: TCMSPage;
+};
 
-const StacksView = (props: Props) => {
+const StacksView = async (props: Props) => {
+  const { page } = props;
+  const stacksRes = await fetchStacks();
+
   return (
     <>
-      <HeaderSection
-        title="Stacks"
-        description="Tools and technologies I use regularly"
-      />
-      <section className="container space-y-5">
-        {stacks.map((item) => (
+      <HeaderSection title={page.title} description={page.description} />
+      <section className="container space-y-8">
+        {stacksRes.map((item) => (
           <LabelSection label={item.title} key={item.id}>
             <section className="grid grid-cols-1 md:grid-cols-2 p-1 sm:p-2 gap-2">
               {item.items.map((item) => (
-                <article
-                  key={item.id}
-                  className="flex items-start p-3 gap-x-4 hover:bg-accent rounded-xl duration-200"
-                >
-                  <div className="shrink-0 size-8 inline-flex items-center justify-center bg-accent rounded-md">
-                    <img
-                      src={item.icon.url}
-                      alt={item.icon?.alt || item.title}
-                      width={20}
-                    />
-                  </div>
-                  <section>
-                    <div className="flex items-center gap-2 mb-1">
-                      <h4 className="text-base font-bold">{item.title}</h4>{" "}
-                      {item.skillLevel ? (
-                        <Badge variant={"outline"} className="text-xs">
-                          {item.skillLevel}
-                        </Badge>
-                      ) : null}
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </section>
-                </article>
+                <StackItemCard key={item.id} data={item} />
               ))}
             </section>
           </LabelSection>

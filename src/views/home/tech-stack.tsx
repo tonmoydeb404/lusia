@@ -1,29 +1,32 @@
-/* eslint-disable @next/next/no-img-element */
 import LabelSection from "@/components/sections/label-section";
-import { stacks } from "@/db/stacks";
+import { TCMSStackItem } from "@/types/cms/db/stack";
+import Image from "next/image";
 
-type Props = {};
+type Props = {
+  stackItems: TCMSStackItem[];
+};
 
 const TechStack = (props: Props) => {
+  const { stackItems } = props;
+
   return (
     <LabelSection
       label="Tech Stack"
-      wrapperClassname="p-4 flex items-center flex-wrap gap-2"
+      className="min-h-full"
+      wrapperClassname="p-4 grow"
     >
-      {[
-        ...stacks[0].items,
-        ...stacks[1].items,
-        ...stacks[2].items,
-        ...stacks[3].items,
-      ].map((item) => (
-        <div key={item.id} className="p-2 border rounded-lg">
-          <img
-            src={item.icon.url}
-            alt={item.icon.alt || item.title}
-            width={30}
-          />
-        </div>
-      ))}
+      <div className="flex items-center flex-wrap gap-2">
+        {stackItems.map((item) => (
+          <div key={item.id} className="p-2 border rounded-lg">
+            <Image
+              src={item.logo.url}
+              alt={item.title}
+              width={30}
+              height={30}
+            />
+          </div>
+        ))}
+      </div>
     </LabelSection>
   );
 };

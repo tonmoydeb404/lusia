@@ -9,7 +9,11 @@ type Props = {};
 const GithubActivity = (props: Props) => {
   const { theme } = useTheme();
   return (
-    <LabelSection label="Github Activity" wrapperClassname="p-4">
+    <LabelSection
+      label="Github Activity"
+      wrapperClassname="p-4"
+      className="min-h-full"
+    >
       <GitHubCalendar
         username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
         colorScheme={theme === "light" ? "light" : "dark"}
