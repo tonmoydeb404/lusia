@@ -1,6 +1,8 @@
 const envConfig = {
   BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   GITHUB_USERNAME: process.env.NEXT_PUBLIC_GITHUB_USERNAME,
+  FORM_API: process.env.NEXT_PUBLIC_FORM_API,
+
   CMS: {
     ENDPOINT: process.env.CMS_ENDPOINT,
     PROFILE_ID: process.env.CMS_PROFILE_ID,
