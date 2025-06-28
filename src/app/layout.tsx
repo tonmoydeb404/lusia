@@ -3,9 +3,9 @@ import AppLayout from "@/layout";
 import { fetchPage } from "@/services/cms/page";
 import { fetchProfile } from "@/services/cms/profile";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Providers from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +25,13 @@ export default async function RootLayout(props: Props) {
   const { children } = props;
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pb-20`}
       >
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <AppLayout>{children}</AppLayout>
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

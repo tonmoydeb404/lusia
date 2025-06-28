@@ -1,5 +1,6 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage } from "@/services/cms/page";
+import { fetchStacks } from "@/services/cms/stack";
 import StacksView from "@/views/stacks";
 import { notFound } from "next/navigation";
 
@@ -7,6 +8,7 @@ type Props = {};
 
 const StacksPage = async (props: Props) => {
   const pageRes = await fetchPage("stacks");
+  const stacksRes = await fetchStacks();
 
   if (!pageRes) {
     notFound();
@@ -14,7 +16,7 @@ const StacksPage = async (props: Props) => {
 
   return (
     <>
-      <StacksView page={pageRes} />
+      <StacksView page={pageRes} stacks={stacksRes} />
     </>
   );
 };
