@@ -17,7 +17,7 @@ export async function fetchPosts() {
   try {
     const data = await hashnodeRequest<PublicationResponse>(
       fetchPostsQuery,
-      { host: envConfig.HASHNODE_URL },
+      { host: envConfig.HASHNODE.URL },
       [CacheTags.HN_POSTS]
     );
     return data.publication?.posts?.edges.map((edge) => edge.node) || [];
@@ -38,7 +38,7 @@ export async function fetchPostPinned() {
   try {
     const data = await hashnodeRequest<PinnedPostResponse>(
       fetchPostPinnedQuery,
-      { host: envConfig.HASHNODE_URL },
+      { host: envConfig.HASHNODE.URL },
       [CacheTags.HN_PINNED]
     );
     return data.publication.pinnedPost;

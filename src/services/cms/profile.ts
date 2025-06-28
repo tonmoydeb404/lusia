@@ -13,7 +13,7 @@ export async function fetchProfile() {
     const data = await cmsRequest<ProfileResponse>(
       fetchProfileQuery,
       {
-        id: envConfig.CMS_PROFILE_ID,
+        id: envConfig.CMS.PROFILE_ID,
       },
       [CacheTags.CMS_PROFILE]
     );

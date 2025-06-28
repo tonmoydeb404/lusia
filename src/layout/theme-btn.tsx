@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { LuMoon, LuSun } from "react-icons/lu";
 
@@ -8,9 +9,10 @@ type Props = {};
 
 const ThemeBtn = (props: Props) => {
   const { setTheme, theme } = useTheme();
+  const isDark = theme === "dark";
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -20,10 +22,10 @@ const ThemeBtn = (props: Props) => {
       className="rounded-full"
       onClick={toggleTheme}
     >
-      {theme === "light" ? (
-        <LuSun className="size-5!" />
+      {isDark ? (
+        <LuMoon className={cn("size-5!")} />
       ) : (
-        <LuMoon className="size-5!" />
+        <LuSun className={cn("size-5!")} />
       )}
     </Button>
   );

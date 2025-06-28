@@ -1,9 +1,15 @@
 const envConfig = {
-  HASHNODE_URL: process.env.HASHNODE_URL,
-  CMS_ENDPOINT: process.env.CMS_ENDPOINT,
-  CMS_PROFILE_ID: process.env.CMS_PROFILE_ID,
   BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   GITHUB_USERNAME: process.env.NEXT_PUBLIC_GITHUB_USERNAME,
+  CMS: {
+    ENDPOINT: process.env.CMS_ENDPOINT,
+    PROFILE_ID: process.env.CMS_PROFILE_ID,
+    REVALIDATE_SECRET: process.env.CMS_REVALIDATE_SECRET,
+  },
+  HASHNODE: {
+    URL: process.env.HASHNODE_URL,
+    REVALIDATE_SECRET: process.env.HASHNODE_REVALIDATE_SECRET,
+  },
 };
 
 export default envConfig;
