@@ -39,4 +39,4 @@ export const graphqlRequestBuilder =
 export const hashnodeRequest = graphqlRequestBuilder(
   "https://gql.hashnode.com/"
 );
-export const cmsRequest = graphqlRequestBuilder(envConfig.CMS_ENDPOINT);
+export const cmsRequest = graphqlRequestBuilder(envConfig.CMS.ENDPOINT);

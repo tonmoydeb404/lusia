@@ -4,3 +4,11 @@ export type TCMSMedia = {
   width: number;
   height: number;
 };
+
+export enum TCMSContentType {
+  PAGE = "Page",
+  PRODUCT = "Product",
+  PROFILE = "Profile",
+  STACK = "Stack",
+  WORK = "Work",
+}
