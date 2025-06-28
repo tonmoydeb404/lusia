@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     switch (type) {
       case TCMSContentType.PAGE:
         revalidateTag(CacheTags.CMS_PAGES);
-        revalidateTag(`${CacheTags.CMS_PAGES}-${body.slug}`);
+        revalidateTag(`${CacheTags.CMS_PAGES}-${body?.data.slug}`);
         break;
       case TCMSContentType.PRODUCT:
         revalidateTag(CacheTags.CMS_PRODUCTS);
