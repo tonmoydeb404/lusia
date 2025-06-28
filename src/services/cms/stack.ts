@@ -1,5 +1,5 @@
 import { CacheTags } from "@/common/cache";
-import { TCMSStack } from "@/types/cms/db/stack";
+import { TCMSStack } from "@/types/cms/stack";
 import { cmsRequest } from "../common";
 import { fetchStacksQuery } from "./stack.query";
 

@@ -1,5 +1,5 @@
 import { CacheTags } from "@/common/cache";
-import { TCMSWork } from "@/types/cms/db/work";
+import { TCMSWork } from "@/types/cms/work";
 import { cmsRequest } from "../common";
 import { fetchWorksQuery } from "./work.query";
 

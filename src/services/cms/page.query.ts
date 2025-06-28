@@ -5,6 +5,7 @@ query FetchPages {
     title
     slug
     isCustomPage
+    updatedAt
   }
 }
 `;

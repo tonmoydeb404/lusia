@@ -1,4 +1,4 @@
-import { TCMSWork } from "@/types/cms/db/work";
+import { TCMSWork } from "@/types/cms/work";
 
 type Props = {
   data: TCMSWork;

@@ -1,5 +1,5 @@
 import { CacheTags } from "@/common/cache";
-import { TCMSProduct } from "@/types/cms/db/product";
+import { TCMSProduct } from "@/types/cms/product";
 import { cmsRequest } from "../common";
 import { fetchProductsQuery } from "./product.query";
 

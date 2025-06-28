@@ -2,7 +2,7 @@ import StackItemCard from "@/components/cards/stack-item-card";
 import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
 import { fetchStacks } from "@/services/cms/stack";
-import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
   page: TCMSPage;

@@ -1,5 +1,5 @@
 import LabelSection from "@/components/sections/label-section";
-import { TCMSProduct } from "@/types/cms/db/product";
+import { TCMSProduct } from "@/types/cms/product";
 import Link from "next/link";
 
 type Props = {

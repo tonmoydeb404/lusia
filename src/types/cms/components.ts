@@ -1,3 +1,5 @@
+import { TCMSMedia } from "./common";
+
 export type TCMSLinkComponent = {
   title: string;
   href: string;
@@ -11,4 +13,5 @@ export type TCMSMetaSEO = {
   canonicalUrl?: string;
   index?: boolean;
   follow?: boolean;
+  image?: TCMSMedia;
 };

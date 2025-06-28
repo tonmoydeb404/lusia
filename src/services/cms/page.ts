@@ -1,5 +1,5 @@
 import { CacheTags } from "@/common/cache";
-import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSPage } from "@/types/cms/page";
 import { cmsRequest } from "../common";
 import { fetchPageQuery, fetchPagesQuery } from "./page.query";
 

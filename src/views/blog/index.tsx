@@ -2,8 +2,8 @@ import PostCard from "@/components/cards/post-card";
 import HeaderSection from "@/components/sections/header-section";
 import RichTextSection from "@/components/sections/rich-text-section";
 import { Button } from "@/components/ui/button";
-import { TCMSPage } from "@/types/cms/db/page";
-import { THNPost } from "@/types/hashnode/db/post.type";
+import { TCMSPage } from "@/types/cms/page";
+import { THNPost } from "@/types/hashnode/post.type";
 import Link from "next/link";
 
 type Props = {

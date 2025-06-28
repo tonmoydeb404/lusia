@@ -1,5 +1,5 @@
-import { TCMSPage } from "@/types/cms/db/page";
-import { TCMSProfile } from "@/types/cms/db/profile";
+import { TCMSPage } from "@/types/cms/page";
+import { TCMSProfile } from "@/types/cms/profile";
 import GithubActivity from "./github-activity";
 import HeroSection from "./hero-section";
 import PinnedArticle from "./pinned-article";

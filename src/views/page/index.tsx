@@ -1,5 +1,5 @@
 import HeaderSection from "@/components/sections/header-section";
-import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
   pageData: TCMSPage;

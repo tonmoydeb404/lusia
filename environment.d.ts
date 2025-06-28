@@ -4,5 +4,6 @@ namespace NodeJS {
     HASHNODE_URL: string;
     CMS_ENDPOINT: string;
     CMS_PROFILE_ID: string;
+    NEXT_PUBLIC_BASE_URL: string;
   }
 }
