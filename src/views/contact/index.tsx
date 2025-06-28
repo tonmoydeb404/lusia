@@ -44,7 +44,12 @@ const ContactView = async (props: Props) => {
       </HeaderSection>
       <div className="container">
         <LabelSection label="Get In touch">
-          <ContactForm />
+          <ContactForm
+            email={
+              profileRes?.contacts?.find((item) => item.ref === "email")
+                ?.href ?? null
+            }
+          />
         </LabelSection>
       </div>
     </>
