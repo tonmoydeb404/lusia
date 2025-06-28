@@ -1,4 +1,4 @@
-import { THNPost } from "@/types/hashnode/db/post.type";
+import { THNPost } from "@/types/hashnode/post.type";
 import Link from "next/link";
 
 type Props = {

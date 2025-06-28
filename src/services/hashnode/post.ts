@@ -1,6 +1,6 @@
 import { CacheTags } from "@/common/cache";
 import envConfig from "@/common/env-config";
-import { THNPost } from "@/types/hashnode/db/post.type";
+import { THNPost } from "@/types/hashnode/post.type";
 import { hashnodeRequest } from "../common";
 import { fetchPostPinnedQuery, fetchPostsQuery } from "./post.query";
 
