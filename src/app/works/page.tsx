@@ -1,3 +1,4 @@
+import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage } from "@/services/cms/page";
 import WorksView from "@/views/works";
 import { notFound } from "next/navigation";
@@ -19,3 +20,13 @@ const WorksPage = async (props: Props) => {
 };
 
 export default WorksPage;
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async () => {
+  const pageRes = await fetchPage("works");
+
+  return metaSeoToMetadata(pageRes?.metaSeo, {
+    openGraph: { type: "website" },
+  });
+};

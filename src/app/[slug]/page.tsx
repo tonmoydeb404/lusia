@@ -1,3 +1,4 @@
+import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage, fetchPages } from "@/services/cms/page";
 import PageView from "@/views/page";
 import { notFound } from "next/navigation";
@@ -34,3 +35,14 @@ export async function generateStaticParams() {
       slug: page.slug,
     }));
 }
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (props: Props) => {
+  const { slug } = await props.params;
+  const pageRes = await fetchPage(slug);
+
+  return metaSeoToMetadata(pageRes?.metaSeo, {
+    openGraph: { type: "website" },
+  });
+};

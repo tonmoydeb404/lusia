@@ -1,3 +1,4 @@
+import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage } from "@/services/cms/page";
 import ProductsView from "@/views/products";
 import { notFound } from "next/navigation";
@@ -19,3 +20,13 @@ const ProductsPage = async (props: Props) => {
 };
 
 export default ProductsPage;
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async () => {
+  const pageRes = await fetchPage("products");
+
+  return metaSeoToMetadata(pageRes?.metaSeo, {
+    openGraph: { type: "website" },
+  });
+};

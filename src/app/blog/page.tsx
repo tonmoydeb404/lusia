@@ -1,3 +1,4 @@
+import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage } from "@/services/cms/page";
 import { fetchPosts } from "@/services/hashnode/post";
 import BlogView from "@/views/blog";
@@ -17,3 +18,13 @@ const BlogPage = async (props: Props) => {
 };
 
 export default BlogPage;
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async () => {
+  const pageRes = await fetchPage("blog");
+
+  return metaSeoToMetadata(pageRes?.metaSeo, {
+    openGraph: { type: "website" },
+  });
+};

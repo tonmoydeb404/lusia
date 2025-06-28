@@ -1,3 +1,4 @@
+import { metaSeoToMetadata } from "@/helpers/metadata";
 import { fetchPage } from "@/services/cms/page";
 import ContactView from "@/views/contact";
 import { notFound } from "next/navigation";
@@ -19,3 +20,13 @@ const ContactPage = async (props: Props) => {
 };
 
 export default ContactPage;
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async () => {
+  const pageRes = await fetchPage("contact");
+
+  return metaSeoToMetadata(pageRes?.metaSeo, {
+    openGraph: { type: "website" },
+  });
+};
