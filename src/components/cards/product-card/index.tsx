@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/db/product";
+import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/product";
 import Image from "next/image";
 import Link from "next/link";
 import { LuExternalLink, LuGitBranch } from "react-icons/lu";

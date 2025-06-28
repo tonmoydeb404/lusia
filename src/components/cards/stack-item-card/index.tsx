@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { TCMSStackItem } from "@/types/cms/db/stack";
+import { TCMSStackItem } from "@/types/cms/stack";
 import Image from "next/image";
 
 type Props = {

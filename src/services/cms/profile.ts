@@ -1,6 +1,6 @@
 import { CacheTags } from "@/common/cache";
 import envConfig from "@/common/env-config";
-import { TCMSProfile } from "@/types/cms/db/profile";
+import { TCMSProfile } from "@/types/cms/profile";
 import { cmsRequest } from "../common";
 import { fetchProfileQuery } from "./profile.query";
 

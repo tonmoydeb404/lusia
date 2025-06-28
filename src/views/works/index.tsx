@@ -2,7 +2,7 @@ import WorkCard from "@/components/cards/work-card";
 import HeaderSection from "@/components/sections/header-section";
 import RichTextSection from "@/components/sections/rich-text-section";
 import { fetchWorks } from "@/services/cms/work";
-import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
   page: TCMSPage;

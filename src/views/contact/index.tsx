@@ -3,7 +3,7 @@ import HeaderSection from "@/components/sections/header-section";
 import LabelSection from "@/components/sections/label-section";
 import { Badge } from "@/components/ui/badge";
 import { fetchProfile } from "@/services/cms/profile";
-import { TCMSPage } from "@/types/cms/db/page";
+import { TCMSPage } from "@/types/cms/page";
 import Link from "next/link";
 import ContactForm from "./contact-form";
 

@@ -1,5 +1,5 @@
 import LabelSection from "@/components/sections/label-section";
-import { TCMSStackItem } from "@/types/cms/db/stack";
+import { TCMSStackItem } from "@/types/cms/stack";
 import Image from "next/image";
 
 type Props = {
