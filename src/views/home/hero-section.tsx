@@ -13,7 +13,7 @@ const HeroSection = async (props: Props) => {
       {profile?.avatar && (
         <Image
           src={profile.avatar.url}
-          alt={profile.avatar.alt}
+          alt={profile.avatar?.alt || profile?.name}
           width={100}
           height={100}
           className="mb-7 rounded-full"
