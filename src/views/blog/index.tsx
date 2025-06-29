@@ -26,9 +26,7 @@ const BlogView = (props: Props) => {
         ))}
       </section>
 
-      {!!pageData?.content?.html && (
-        <RichTextSection htmlString={pageData.content.html} />
-      )}
+      <RichTextSection htmlString={pageData?.content?.html ?? null} />
 
       <section className="container mt-16">
         <Button asChild>

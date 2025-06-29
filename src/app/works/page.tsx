@@ -14,7 +14,7 @@ const WorksPage = async (props: Props) => {
 
   return (
     <>
-      <WorksView page={pageRes} />
+      <WorksView pageData={pageRes} />
     </>
   );
 };

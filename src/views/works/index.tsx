@@ -5,23 +5,26 @@ import { fetchWorks } from "@/services/cms/work";
 import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
-  page: TCMSPage;
+  pageData: TCMSPage;
 };
 
 const WorksView = async (props: Props) => {
-  const { page } = props;
+  const { pageData } = props;
   const worksRes = await fetchWorks();
 
   return (
     <>
-      <HeaderSection description={page.description} title={page.title} />
+      <HeaderSection
+        description={pageData.description}
+        title={pageData.title}
+      />
 
       <section className="container mb-16">
         {worksRes.map((item) => (
           <WorkCard data={item} key={item.id} />
         ))}
       </section>
-      {page.content?.html && <RichTextSection htmlString={page.content.html} />}
+      <RichTextSection htmlString={pageData?.content?.html ?? null} />
     </>
   );
 };

@@ -1,13 +1,19 @@
 type Props = {
-  htmlString: string;
+  htmlString: string | null;
 };
 
 const RichTextSection = (props: Props) => {
+  const { htmlString } = props;
+
+  if (htmlString === null) return null;
+
   return (
-    <article
-      className="container max-w-(--breakpoint-lg) prose dark:prose-invert"
-      dangerouslySetInnerHTML={{ __html: props.htmlString }}
-    ></article>
+    <div className="container">
+      <article
+        className="prose dark:prose-invert max-w-full"
+        dangerouslySetInnerHTML={{ __html: htmlString }}
+      ></article>
+    </div>
   );
 };
 
