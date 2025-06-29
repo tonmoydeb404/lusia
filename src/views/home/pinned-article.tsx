@@ -1,6 +1,8 @@
 import LabelSection from "@/components/sections/label-section";
+import { generateArticleSchema } from "@/helpers/schema-org";
 import { fetchPostPinned } from "@/services/hashnode/post";
 import Link from "next/link";
+import Script from "next/script";
 
 type Props = {};
 
@@ -27,6 +29,13 @@ const PinnedArticle = async (props: Props) => {
           <p className="text-sm text-muted-foreground line-clamp-4">
             {pinnedPostRes.brief}
           </p>
+          <Script
+            id={"schema-article-" + pinnedPostRes.slug}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(generateArticleSchema(pinnedPostRes)),
+            }}
+          />
         </>
       ) : (
         <>

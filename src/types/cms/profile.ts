@@ -11,4 +11,6 @@ export type TCMSProfile = {
   stackItems: TCMSStackItem[];
   ongoingProduct?: TCMSProduct;
   callToActions: TCMSLinkComponent[];
+  createdAt: string;
+  updatedAt: string;
 };

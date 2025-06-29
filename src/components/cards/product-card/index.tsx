@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  generateProductSchema,
+  generateSoftwareApplicationSchema,
+} from "@/helpers/schema-org";
 import { CMSProductPricingTypeEnum, TCMSProduct } from "@/types/cms/product";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { LuExternalLink, LuGitBranch } from "react-icons/lu";
 
 type Props = {
@@ -49,6 +54,22 @@ const ProductCard = (props: Props) => {
           </Button>
         )}
       </div>
+
+      <Script
+        id={"schema-product-" + product.id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateProductSchema(product)),
+        }}
+      />
+
+      <Script
+        id={"schema-software-" + product.id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateSoftwareApplicationSchema(product)),
+        }}
+      />
     </article>
   );
 };

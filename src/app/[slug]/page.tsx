@@ -1,7 +1,13 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
+import {
+  generateAboutPageSchema,
+  generatePageBreadcrumb,
+  generateWebPageSchema,
+} from "@/helpers/schema-org";
 import { fetchPage, fetchPages } from "@/services/cms/page";
 import PageView from "@/views/page";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -18,6 +24,32 @@ const OthersPage = async (props: Props) => {
   return (
     <>
       <PageView pageData={pageRes} />
+
+      <Script
+        id={"schema-page-" + slug}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateWebPageSchema(pageRes)),
+        }}
+      />
+      {slug === "about" && (
+        <Script
+          id={"schema-about"}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateAboutPageSchema(pageRes)),
+          }}
+        />
+      )}
+      <Script
+        id={"schema-breadcrumb-" + slug}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generatePageBreadcrumb(pageRes.title, pageRes.slug)
+          ),
+        }}
+      />
     </>
   );
 };

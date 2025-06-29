@@ -1,4 +1,6 @@
+import { generateOrganizationSchema } from "@/helpers/schema-org";
 import { TCMSWork } from "@/types/cms/work";
+import Script from "next/script";
 
 type Props = {
   data: TCMSWork;
@@ -16,6 +18,14 @@ const WorkCard = (props: Props) => {
       <span className="text-sm text-muted-foreground">
         {data.startYear} - {data.endYear ?? "Present"}
       </span>
+
+      <Script
+        id={"schema-org-" + data.id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateOrganizationSchema(data)),
+        }}
+      />
     </article>
   );
 };
