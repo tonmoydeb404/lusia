@@ -6,7 +6,8 @@ import {
   CommandInput,
   CommandList,
 } from "@/components/ui/command";
-import React from "react";
+import { useSearchQuery } from "@/router/use-search-query";
+import React, { useEffect } from "react";
 import EmptyState from "./empty-state";
 import useSearchBar from "./hook";
 import InitialState from "./initial-state";
@@ -16,11 +17,10 @@ import { SearchItem, SearchProps } from "./types";
 interface SearchDialogProps extends SearchProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  onSelect: (item: SearchItem) => void;
 }
 
 export const SearchDialog: React.FC<SearchDialogProps> = (props) => {
-  const { open, onOpenChange, onSelect, links, pages, products } = props;
+  const { open, onOpenChange, links, pages, products } = props;
   const {
     hasResults,
     linkResults,
@@ -32,9 +32,12 @@ export const SearchDialog: React.FC<SearchDialogProps> = (props) => {
     typedPages,
     typedProducts,
   } = useSearchBar({ links, pages, products });
+  const searchQueries = useSearchQuery();
+  const urlQuery = searchQueries.get("query");
+
+  // ----------------------------------------------------------------------
 
   const handleSelect = (item: SearchItem) => {
-    onSelect(item);
     onOpenChange(false);
     setQuery("");
   };
@@ -55,6 +58,16 @@ export const SearchDialog: React.FC<SearchDialogProps> = (props) => {
       data: productResults,
     },
   ];
+
+  // ----------------------------------------------------------------------
+
+  useEffect(() => {
+    if (typeof urlQuery === "string" && urlQuery.length > 0) {
+      setQuery(urlQuery);
+      onOpenChange(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [urlQuery]);
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>

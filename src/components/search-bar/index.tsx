@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { Button } from "../ui/button";
 import { SearchDialog } from "./dialog";
-import { SearchItem, SearchProps } from "./types";
+import { SearchProps } from "./types";
 
 interface SearchBarProps extends SearchProps {}
 
@@ -27,20 +27,6 @@ export const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
-  const handleSelect = (item: SearchItem): void => {
-    if (item.type === "link") {
-      if (item.newTab) {
-        window.open(item.href, "_blank");
-      } else {
-        window.location.href = item.href;
-      }
-    } else if (item.type === "page") {
-      router.push(`/${item.slug}`);
-    } else if (item.type === "product") {
-      window.open(item.liveLink, "_blank");
-    }
-  };
-
   return (
     <>
       <Button
@@ -55,7 +41,6 @@ export const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
       <SearchDialog
         open={open}
         onOpenChange={setOpen}
-        onSelect={handleSelect}
         links={links}
         pages={pages}
         products={products}
