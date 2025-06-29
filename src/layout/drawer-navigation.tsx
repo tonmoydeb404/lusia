@@ -31,7 +31,7 @@ const DrawerNavigation = (props: Props) => {
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
             <DrawerTitle>Tonmoy Deb</DrawerTitle>
-            <DrawerDescription>Lorem ipsum dolor sit amet.</DrawerDescription>
+            <DrawerDescription>Explore more about me</DrawerDescription>
           </DrawerHeader>
           <div className="p-4 flex flex-col gap-y-1">
             {links.map((item, index) => (
