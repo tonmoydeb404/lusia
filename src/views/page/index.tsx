@@ -1,4 +1,5 @@
 import HeaderSection from "@/components/sections/header-section";
+import RichTextSection from "@/components/sections/rich-text-section";
 import { TCMSPage } from "@/types/cms/page";
 
 type Props = {
@@ -13,12 +14,7 @@ const PageView = (props: Props) => {
         title={pageData.title}
         description={pageData.description}
       />
-      {pageData.content && (
-        <article
-          className="container max-w-(--breakpoint-lg) prose dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: pageData.content.html }}
-        />
-      )}
+      <RichTextSection htmlString={pageData?.content?.html ?? null} />
     </>
   );
 };

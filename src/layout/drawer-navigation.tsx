@@ -36,7 +36,7 @@ const DrawerNavigation = (props: Props) => {
           <div className="p-4 flex flex-col gap-y-1">
             {links.map((item, index) => (
               <DrawerClose key={index} asChild>
-                <Button variant={"secondary"} asChild>
+                <Button variant={"outline"} asChild>
                   <Link href={item.path}>{item.title}</Link>
                 </Button>
               </DrawerClose>
@@ -44,7 +44,7 @@ const DrawerNavigation = (props: Props) => {
           </div>
           <DrawerFooter>
             <DrawerClose asChild>
-              <Button variant="outline">Close</Button>
+              <Button variant="secondary">Close</Button>
             </DrawerClose>
           </DrawerFooter>
         </div>
