@@ -7,23 +7,24 @@ import { Props } from ".";
 
 const HeroSection = async (props: Props) => {
   const { page, profile } = props;
+  const { avatar, socials, callToActions } = profile;
 
   return (
     <section className="container pb-24">
-      {profile?.avatar && (
+      {avatar && (
         <Image
-          src={profile.avatar.url}
-          alt={profile.avatar?.alt || profile?.name}
+          src={avatar.url}
+          alt={avatar?.alt || profile?.name}
           width={100}
           height={100}
           className="mb-7 rounded-full"
         />
       )}
-      <h1 className="text-4xl font-bold mb-2">{page.title}</h1>
-      <p className="text-lg mb-10">{page.description}</p>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-2">{page.title}</h1>
+      <p className="text-base sm:text-lg mb-10">{page.description}</p>
       <div className="flex justify-between flex-col sm:flex-row sm:items-center gap-5">
         <div className="flex items-center flex-wrap gap-2">
-          {profile?.callToActions?.map((item, index) => {
+          {callToActions?.map((item, index) => {
             const Icon = getIcon(item.ref);
 
             return (
@@ -44,12 +45,10 @@ const HeroSection = async (props: Props) => {
           })}
         </div>
 
-        <div className="flex items-center justify-end flex-wrap gap-1.5">
-          {profile.socials.map((item) => {
-            if (
-              profile.callToActions.findIndex((cta) => cta.ref === item.ref) !==
-              -1
-            ) {
+        <div className="flex items-center flex-wrap gap-1.5">
+          <div className="grow border border-accent border-dashed mr-2 sm:hidden" />
+          {socials.map((item) => {
+            if (callToActions.findIndex((cta) => cta.ref === item.ref) !== -1) {
               return null;
             }
 
