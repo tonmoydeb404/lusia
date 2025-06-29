@@ -1,5 +1,8 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
-import { generateWebPageSchema } from "@/helpers/schema-org";
+import {
+  generatePageBreadcrumb,
+  generateWebPageSchema,
+} from "@/helpers/schema-org";
 import { fetchPage } from "@/services/cms/page";
 import ProductsView from "@/views/products";
 import { notFound } from "next/navigation";
@@ -17,15 +20,23 @@ const ProductsPage = async (props: Props) => {
   return (
     <>
       <ProductsView pageData={pageRes} />
-      {pageRes && (
-        <Script
-          id="schema-page-products"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateWebPageSchema(pageRes)),
-          }}
-        />
-      )}
+
+      <Script
+        id="schema-page-products"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateWebPageSchema(pageRes)),
+        }}
+      />
+      <Script
+        id={"schema-breadcrumb-products"}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generatePageBreadcrumb(pageRes.title, pageRes.slug)
+          ),
+        }}
+      />
     </>
   );
 };

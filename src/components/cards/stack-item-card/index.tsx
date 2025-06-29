@@ -1,6 +1,8 @@
 import { Badge } from "@/components/ui/badge";
+import { generateServiceSchema } from "@/helpers/schema-org";
 import { TCMSStackItem } from "@/types/cms/stack";
 import Image from "next/image";
+import Script from "next/script";
 
 type Props = {
   data: TCMSStackItem;
@@ -33,6 +35,13 @@ const StackItemCard = (props: Props) => {
         </div>
         <p className="text-sm text-muted-foreground">{data.description}</p>
       </section>
+      <Script
+        id={"schema-service-" + data.id}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateServiceSchema(data)),
+        }}
+      />
     </article>
   );
 };

@@ -1,6 +1,7 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
 import {
   generatePersonSchema,
+  generateProfilePageSchema,
   generateWebSiteSchema,
 } from "@/helpers/schema-org";
 import AppLayout from "@/layout";
@@ -40,25 +41,37 @@ export default async function RootLayout(props: Props) {
         <ThemeProvider attribute="class" defaultTheme="system">
           <AppLayout>{children}</AppLayout>
         </ThemeProvider>
+
         {profileRes && pageRes && (
-          <Script
-            id="schema-org-website"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(
-                generateWebSiteSchema(profileRes, pageRes)
-              ),
-            }}
-          />
-        )}
-        {profileRes && pageRes && (
-          <Script
-            id="schema-org-person"
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(generatePersonSchema(profileRes, pageRes)),
-            }}
-          />
+          <>
+            <Script
+              id="schema-website"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                  generateWebSiteSchema(profileRes, pageRes)
+                ),
+              }}
+            />
+            <Script
+              id="schema-person"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                  generatePersonSchema(profileRes, pageRes)
+                ),
+              }}
+            />
+            <Script
+              id="schema-profile"
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(
+                  generateProfilePageSchema(profileRes, pageRes)
+                ),
+              }}
+            />
+          </>
         )}
       </body>
     </html>

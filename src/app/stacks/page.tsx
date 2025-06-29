@@ -1,5 +1,8 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
-import { generateWebPageSchema } from "@/helpers/schema-org";
+import {
+  generatePageBreadcrumb,
+  generateWebPageSchema,
+} from "@/helpers/schema-org";
 import { fetchPage } from "@/services/cms/page";
 import { fetchStacks } from "@/services/cms/stack";
 import StacksView from "@/views/stacks";
@@ -19,15 +22,23 @@ const StacksPage = async (props: Props) => {
   return (
     <>
       <StacksView page={pageRes} stacks={stacksRes} />
-      {pageRes && (
-        <Script
-          id="schema-page-stacks"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateWebPageSchema(pageRes)),
-          }}
-        />
-      )}
+
+      <Script
+        id="schema-page-stacks"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateWebPageSchema(pageRes)),
+        }}
+      />
+      <Script
+        id={"schema-breadcrumb-stacks"}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generatePageBreadcrumb(pageRes.title, pageRes.slug)
+          ),
+        }}
+      />
     </>
   );
 };

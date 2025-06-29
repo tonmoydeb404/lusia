@@ -1,5 +1,7 @@
+import { generateArticleSchema } from "@/helpers/schema-org";
 import { THNPost } from "@/types/hashnode/post.type";
 import Link from "next/link";
+import Script from "next/script";
 
 type Props = {
   data: THNPost;
@@ -25,6 +27,14 @@ const PostCard = (props: Props) => {
       <p className="text-base text-muted-foreground line-clamp-2">
         {data.brief}
       </p>
+
+      <Script
+        id={"schema-article-" + data.slug}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateArticleSchema(data)),
+        }}
+      />
     </article>
   );
 };

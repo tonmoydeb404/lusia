@@ -1,5 +1,8 @@
 import { metaSeoToMetadata } from "@/helpers/metadata";
-import { generateWebPageSchema } from "@/helpers/schema-org";
+import {
+  generatePageBreadcrumb,
+  generateWebPageSchema,
+} from "@/helpers/schema-org";
 import { fetchPage } from "@/services/cms/page";
 import WorksView from "@/views/works";
 import { notFound } from "next/navigation";
@@ -17,15 +20,23 @@ const WorksPage = async (props: Props) => {
   return (
     <>
       <WorksView pageData={pageRes} />
-      {pageRes && (
-        <Script
-          id="schema-page-works"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(generateWebPageSchema(pageRes)),
-          }}
-        />
-      )}
+
+      <Script
+        id="schema-page-works"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateWebPageSchema(pageRes)),
+        }}
+      />
+      <Script
+        id={"schema-breadcrumb-works"}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generatePageBreadcrumb(pageRes.title, pageRes.slug)
+          ),
+        }}
+      />
     </>
   );
 };
