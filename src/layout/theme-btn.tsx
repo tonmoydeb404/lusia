@@ -8,11 +8,12 @@ import { LuMoon, LuSun } from "react-icons/lu";
 type Props = {};
 
 const ThemeBtn = (props: Props) => {
-  const { setTheme, theme } = useTheme();
-  const isDark = theme === "dark";
+  const { setTheme, theme, systemTheme } = useTheme();
+  const appTheme = theme === "system" ? systemTheme : theme;
+  const isDark = appTheme === "dark";
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(isDark ? "light" : "dark");
   };
 
   return (

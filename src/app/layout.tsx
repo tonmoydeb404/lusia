@@ -38,7 +38,7 @@ export default async function RootLayout(props: Props) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pb-20`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>
           <AppLayout>{children}</AppLayout>
         </ThemeProvider>
 
