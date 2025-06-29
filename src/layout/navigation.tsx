@@ -1,19 +1,25 @@
-import { Button } from "@/components/ui/button";
+import SearchBar from "@/components/search-bar";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import NavLink from "@/router/nav-link";
+import { fetchPages } from "@/services/cms/page";
+import { fetchProducts } from "@/services/cms/product";
+import { fetchProfile } from "@/services/cms/profile";
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
-import { LuSearch } from "react-icons/lu";
 import { links } from "./config";
 import DrawerNavigation from "./drawer-navigation";
 import ThemeBtn from "./theme-btn";
 
 type Props = {};
 
-const Navigation = (props: Props) => {
+const Navigation = async (props: Props) => {
+  const pages = await fetchPages();
+  const products = await fetchProducts();
+  const profile = await fetchProfile();
+
   return (
     <header className="container flex items-center justify-between py-5">
       <DrawerNavigation />
@@ -41,9 +47,15 @@ const Navigation = (props: Props) => {
       </NavigationMenu>
 
       <section className="flex items-center gap-1">
-        <Button size={"icon"} variant={"ghost"} className="rounded-full">
-          <LuSearch className="size-5!" />
-        </Button>
+        <SearchBar
+          pages={pages}
+          products={products}
+          links={[
+            ...(profile?.socials || []),
+            ...(profile?.contacts || []),
+            ...(profile?.callToActions || []),
+          ]}
+        />
         <ThemeBtn />
       </section>
     </header>

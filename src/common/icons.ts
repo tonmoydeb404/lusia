@@ -4,11 +4,23 @@ import {
   BiLogoLinkedin,
   BiLogoWhatsapp,
 } from "react-icons/bi";
-import { LuAtSign, LuFile, LuGlobe } from "react-icons/lu";
+import {
+  LuAtSign,
+  LuFile,
+  LuFileText,
+  LuGlobe,
+  LuPackage,
+  LuSquareArrowOutUpRight,
+} from "react-icons/lu";
 
 export const icons = {
   resume: LuFile,
   email: LuAtSign,
+
+  // document
+  page: LuFileText,
+  product: LuPackage,
+  link: LuSquareArrowOutUpRight,
 
   // socials
   discord: BiLogoDiscordAlt,
