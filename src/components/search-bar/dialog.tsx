@@ -7,6 +7,7 @@ import {
   CommandList,
 } from "@/components/ui/command";
 import { useSearchQuery } from "@/router/use-search-query";
+import { useQueryRouter } from "@/router/use-search-router";
 import React, { useEffect } from "react";
 import EmptyState from "./empty-state";
 import useSearchBar from "./hook";
@@ -34,6 +35,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = (props) => {
   } = useSearchBar({ links, pages, products });
   const searchQueries = useSearchQuery();
   const urlQuery = searchQueries.get("query");
+  const queryRouter = useQueryRouter();
 
   // ----------------------------------------------------------------------
 
@@ -65,6 +67,7 @@ export const SearchDialog: React.FC<SearchDialogProps> = (props) => {
     if (typeof urlQuery === "string" && urlQuery.length > 0) {
       setQuery(urlQuery);
       onOpenChange(true);
+      queryRouter.replace({ query: null });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [urlQuery]);
