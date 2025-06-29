@@ -11,7 +11,7 @@ const PostCard = (props: Props) => {
   return (
     <article key={data.slug}>
       <div className="flex flex-col sm:flex-row sm:items-center gap-x-2 gap-y-0.5 mb-2">
-        <h4 className="text-base font-medium">
+        <h4 className="text-lg font-medium">
           <Link href={data.url} target="_blank" className="hover:underline">
             {data.title}
           </Link>
@@ -22,7 +22,9 @@ const PostCard = (props: Props) => {
           {new Date(data.publishedAt).toLocaleDateString()}
         </span>
       </div>
-      <p className="text-sm text-muted-foreground line-clamp-2">{data.brief}</p>
+      <p className="text-base text-muted-foreground line-clamp-2">
+        {data.brief}
+      </p>
     </article>
   );
 };

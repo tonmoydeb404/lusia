@@ -1,3 +1,4 @@
+import envConfig from "@/common/env-config";
 import PostCard from "@/components/cards/post-card";
 import HeaderSection from "@/components/sections/header-section";
 import RichTextSection from "@/components/sections/rich-text-section";
@@ -15,29 +16,23 @@ const BlogView = (props: Props) => {
   const { pageData, postsData } = props;
   return (
     <>
-      <HeaderSection
-        title={pageData.title}
-        description={pageData.description}
-      />
+      <HeaderSection title={pageData.title} description={pageData.description}>
+        <section className="mt-4">
+          <Button asChild>
+            <Link href={`https://${envConfig.HASHNODE.URL}`} target="_blank">
+              Visit Blog
+            </Link>
+          </Button>
+        </section>
+      </HeaderSection>
 
-      <section className="container mb-16 space-y-8">
+      <section className="container mb-16 space-y-12">
         {postsData.map((item) => (
           <PostCard key={item.slug} data={item} />
         ))}
       </section>
 
       <RichTextSection htmlString={pageData?.content?.html ?? null} />
-
-      <section className="container mt-16">
-        <Button asChild>
-          <Link
-            href={`https://${process.env.NEXT_PUBLIC_HASHNODE_URL}`}
-            target="_blank"
-          >
-            Read More Articles
-          </Link>
-        </Button>
-      </section>
     </>
   );
 };
