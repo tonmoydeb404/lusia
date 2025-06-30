@@ -28,6 +28,8 @@ const DrawerNavigation = (props: Props) => {
           size={"icon"}
           variant={"outline"}
           className="rounded-full md:hidden"
+          aria-label="Mobile Menu Trigger"
+          title="Open Mobile Menu"
         >
           <LuMenu className="size-5!" />
         </Button>

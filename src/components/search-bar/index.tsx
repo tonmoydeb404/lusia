@@ -34,6 +34,8 @@ export const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
         variant="ghost"
         className="rounded-full"
         onClick={() => setOpen(true)}
+        aria-label="Search Bar Toggle"
+        title="Open Search Bar"
       >
         <LuSearch className="size-5" />
       </Button>

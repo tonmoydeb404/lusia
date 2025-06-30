@@ -22,6 +22,8 @@ const ThemeBtn = (props: Props) => {
       variant={"ghost"}
       className="rounded-full"
       onClick={toggleTheme}
+      aria-label="Toggle Theme"
+      title="Toggle Theme"
     >
       {isDark ? (
         <LuMoon className={cn("size-5!")} />
