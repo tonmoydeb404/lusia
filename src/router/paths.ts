@@ -4,14 +4,8 @@ const paths = {
   works: "/works",
   stacks: "/stacks",
   contact: "/contact",
-  products: {
-    root: "/products",
-    details: (slug: string) => `/products/${slug}`,
-  },
-  blog: {
-    root: "/blog",
-    details: (slug: string) => `/blog/${slug}`,
-  },
+  products: "/products",
+  blog: "/blog",
 };
 
 export default paths;
