@@ -6,6 +6,7 @@ import { TCMSStackItem } from "./stack";
 export type TCMSProfile = {
   name: string;
   avatar: TCMSMedia;
+  position: string;
   contacts: TCMSLinkComponent[];
   socials: TCMSLinkComponent[];
   stackItems: TCMSStackItem[];

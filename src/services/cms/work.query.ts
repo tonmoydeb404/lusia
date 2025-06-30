@@ -7,6 +7,8 @@ query FetchWorks {
     startYear
     endYear
     companyUrl
+    createdAt
+    updatedAt
   }
 }
 `;

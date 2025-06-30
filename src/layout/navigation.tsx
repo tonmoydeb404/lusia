@@ -2,13 +2,13 @@ import SearchBar from "@/components/search-bar";
 import {
   NavigationMenu,
   NavigationMenuItem,
+  NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import NavLink from "@/router/nav-link";
 import { fetchPages } from "@/services/cms/page";
 import { fetchProducts } from "@/services/cms/product";
 import { fetchProfile } from "@/services/cms/profile";
-import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 import { links } from "./config";
 import DrawerNavigation from "./drawer-navigation";
 import ThemeBtn from "./theme-btn";
@@ -22,7 +22,10 @@ const Navigation = async (props: Props) => {
 
   return (
     <header className="container flex items-center justify-between py-5">
-      <DrawerNavigation />
+      <DrawerNavigation
+        title={profile?.name ?? ""}
+        description={profile?.position ?? ""}
+      />
 
       <NavigationMenu className="max-md:hidden">
         <NavigationMenuList className="border rounded-full overflow-hidden px-3">

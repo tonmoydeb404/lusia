@@ -12,6 +12,8 @@ query FetchProducts {
       width
       height
     }
+    createdAt
+    updatedAt
   }
 }
 `;

@@ -102,7 +102,7 @@ export const generatePersonSchema = (
     sameAs: socialUrls,
     knowsAbout: profile.stackItems.map((stack) => stack.title),
     description: page.description,
-    jobTitle: "Web App Developer",
+    jobTitle: profile.position,
     nationality: "Bangladesh",
     gender: "Male",
     address: {
@@ -260,10 +260,7 @@ export const generateSoftwareApplicationSchema = (
     },
     offers: {
       "@type": "Offer",
-      price:
-        product.pricingType === CMSProductPricingTypeEnum.OPEN_SOURCE
-          ? "0"
-          : undefined,
+      price: 0,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       seller: {
@@ -309,10 +306,7 @@ export const generateProductSchema = (
     },
     offers: {
       "@type": "Offer",
-      price:
-        product.pricingType === CMSProductPricingTypeEnum.OPEN_SOURCE
-          ? "0"
-          : undefined,
+      price: 0,
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
       seller: {

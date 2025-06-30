@@ -3,6 +3,7 @@ query FetchProfile($id: ID) {
   profile(where: {id: $id}) {
     id
     name
+    position
     socials {
       title
       newTab
@@ -50,6 +51,8 @@ query FetchProfile($id: ID) {
       id
       href
     }
+    createdAt
+    updatedAt
   }
 }
 `;

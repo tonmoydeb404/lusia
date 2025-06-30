@@ -13,9 +13,14 @@ import Link from "next/link";
 import { LuMenu } from "react-icons/lu";
 import { links } from "./config";
 
-type Props = {};
+type Props = {
+  title: string;
+  description: string;
+};
 
 const DrawerNavigation = (props: Props) => {
+  const { description, title } = props;
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -30,8 +35,8 @@ const DrawerNavigation = (props: Props) => {
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>Tonmoy Deb</DrawerTitle>
-            <DrawerDescription>Explore more about me</DrawerDescription>
+            <DrawerTitle>{title}</DrawerTitle>
+            <DrawerDescription>{description}</DrawerDescription>
           </DrawerHeader>
           <div className="p-4 flex flex-col gap-y-1">
             {links.map((item, index) => (

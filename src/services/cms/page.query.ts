@@ -5,6 +5,7 @@ query FetchPages {
     title
     slug
     isCustomPage
+    createdAt
     updatedAt
   }
 }
@@ -33,6 +34,8 @@ query FetchPage($slug: String) {
         url
       }
     }
+    createdAt
+    updatedAt
   }
 }
 `;

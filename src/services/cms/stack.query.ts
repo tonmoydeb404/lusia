@@ -14,6 +14,8 @@ query FetchStacks {
         height
       }
     }
+    createdAt
+    updatedAt
   }
 }
 `;
