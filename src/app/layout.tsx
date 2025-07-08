@@ -1,7 +1,9 @@
+import envConfig from "@/common/env-config";
 import { metaSeoToMetadata } from "@/helpers/metadata";
 import AppLayout from "@/layout";
 import { fetchPage } from "@/services/cms/page";
 import { fetchProfile } from "@/services/cms/profile";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -33,6 +35,7 @@ export default async function RootLayout(props: Props) {
           <AppLayout>{children}</AppLayout>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId={envConfig.GA_ID} />
     </html>
   );
 }

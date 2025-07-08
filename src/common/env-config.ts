@@ -12,6 +12,7 @@ const envConfig = {
     URL: process.env.HASHNODE_URL,
     REVALIDATE_SECRET: process.env.HASHNODE_REVALIDATE_SECRET,
   },
+  GA_ID: process.env.GA_ID,
 };
 
 export default envConfig;
