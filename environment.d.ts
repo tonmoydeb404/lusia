@@ -10,5 +10,7 @@ namespace NodeJS {
     CMS_ENDPOINT: string;
     CMS_PROFILE_ID: string;
     CMS_REVALIDATE_SECRET: string;
+
+    GA_ID: string;
   }
 }
