@@ -13,7 +13,7 @@ const LabelSection = (props: Props) => {
     <section
       {...others}
       className={cn(
-        "p-4 bg-secondary rounded-2xl flex flex-col",
+        "p-4 bg-secondary rounded-2xl flex flex-col border",
         others.className
       )}
     >
