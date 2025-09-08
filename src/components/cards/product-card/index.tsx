@@ -19,9 +19,9 @@ const ProductCard = (props: Props) => {
   return (
     <article
       key={product.id}
-      className="flex flex-col items-start p-4 border rounded-2xl hover:shadow-md duration-200 cursor-pointer relative group overflow-hidden"
+      className="flex flex-col items-start p-4 border rounded-2xl hover:shadow-md duration-200 cursor-pointer relative group overflow-hidden bg-card"
     >
-      <div className="p-2 bg-accent rounded-2xl mb-4">
+      <div className="p-2 bg-secondary rounded-2xl mb-4">
         <Image
           src={product.logo.url}
           alt={product.logo?.alt || product.title}

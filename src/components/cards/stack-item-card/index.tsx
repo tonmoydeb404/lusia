@@ -12,7 +12,7 @@ const StackItemCard = (props: Props) => {
   const { data } = props;
   return (
     <article key={data.id} className="flex items-start p-3 gap-x-4 rounded-xl">
-      <div className="shrink-0 size-8 md:size-10 inline-flex items-center justify-center bg-accent rounded-md">
+      <div className="shrink-0 size-8 md:size-10 inline-flex items-center justify-center bg-secondary rounded-md">
         <Image
           src={data.logo.url}
           alt={data.logo?.alt || data.title}
