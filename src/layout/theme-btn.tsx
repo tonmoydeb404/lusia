@@ -1,14 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/lib/next-themes";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
 import { LuMoon, LuSun } from "react-icons/lu";
 
 type Props = {};
 
 const ThemeBtn = (props: Props) => {
-  const { setTheme, theme, systemTheme } = useTheme();
+  const { setTheme, theme, systemTheme, ref } = useTheme();
   const appTheme = theme === "system" ? systemTheme : theme;
   const isDark = appTheme === "dark";
 
@@ -24,6 +24,7 @@ const ThemeBtn = (props: Props) => {
       onClick={toggleTheme}
       aria-label="Toggle Theme"
       title="Toggle Theme"
+      ref={ref}
     >
       {isDark ? (
         <LuMoon className={cn("size-5!")} />

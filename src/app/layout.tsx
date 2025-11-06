@@ -1,11 +1,11 @@
 import envConfig from "@/common/env-config";
 import { metaSeoToMetadata } from "@/helpers/metadata";
 import AppLayout from "@/layout";
+import { ThemeProvider } from "@/lib/next-themes";
 import { fetchPage } from "@/services/cms/page";
 import { fetchProfile } from "@/services/cms/profile";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,7 +31,7 @@ export default async function RootLayout(props: Props) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased pb-20`}
       >
-        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem>
+        <ThemeProvider>
           <AppLayout>{children}</AppLayout>
         </ThemeProvider>
       </body>
