@@ -23,11 +23,11 @@ const StackItemCard = (props: Props) => {
       </div>
       <section>
         <div className="flex items-center gap-2 mb-1">
-          <h3 className="text-base font-bold">{data.title}</h3>{" "}
+          <h3 className="text-base font-medium font-heading">{data.title}</h3>{" "}
           {data.level ? (
             <Badge
-              variant={"secondary"}
-              className="text-[10px] font-light tracking-wider"
+              variant={"inset"}
+              className="text-[10px] font-medium tracking-wider"
             >
               {data.level}
             </Badge>

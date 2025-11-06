@@ -20,7 +20,7 @@ const SearchBarItem = (props: Props) => {
       asChild
     >
       <Link href={data.href} target={data.newTab ? "_blank" : undefined}>
-        <Icon />
+        <Icon.icon color={Icon.color} />
         <div className="flex-1 min-w-0">
           <h3 className="font-medium truncate">{data.title}</h3>
           {data.description && (

@@ -22,11 +22,11 @@ const RecentActivity = (props: Props) => {
     >
       {product ? (
         <>
-          <h3 className="font-bold mb-1.5 flex items-center gap-x-1">
+          <h3 className="font-semibold font-heading mb-1.5 flex items-center gap-x-1">
             {product.liveLink || product.sourceLink ? (
               <Link
                 href={product.liveLink || product.sourceLink}
-                className="hover:underline decoration-wavy decoration-primary"
+                className="wavy-link"
               >
                 {product.title}
               </Link>
@@ -56,7 +56,7 @@ const RecentActivity = (props: Props) => {
         </>
       ) : (
         <>
-          <h3 className="font-bold mb-1.5 flex items-center gap-x-1">
+          <h3 className="font-semibold font-heading mb-1.5 flex items-center gap-x-1">
             Stay Tuned!
           </h3>
           <p className="text-sm text-muted-foreground">

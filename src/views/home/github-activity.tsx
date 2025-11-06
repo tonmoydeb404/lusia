@@ -1,6 +1,7 @@
 "use client";
 
 import LabelSection from "@/components/sections/label-section";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { useTheme } from "next-themes";
 import GitHubCalendar from "react-github-calendar";
 
@@ -14,13 +15,16 @@ const GithubActivity = (props: Props) => {
       wrapperClassname="p-4"
       className="min-h-full"
     >
-      <GitHubCalendar
-        username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
-        colorScheme={theme === "light" ? "light" : "dark"}
-        hideColorLegend
-        blockSize={6.7}
-        hideMonthLabels
-      />
+      <ScrollArea className="text-muted-foreground">
+        <GitHubCalendar
+          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+          colorScheme={theme === "light" ? "light" : "dark"}
+          hideColorLegend
+          blockSize={6.6}
+          // hideMonthLabels
+        />
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     </LabelSection>
   );
 };

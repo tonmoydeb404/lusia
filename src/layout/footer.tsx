@@ -10,7 +10,9 @@ const Footer = async (props: Props) => {
 
   return (
     <footer className="container pt-20 flex flex-col justify-between flex-wrap sm:items-center sm:flex-row gap-5">
-      <p>© 2025 {profileRes?.name}. All rights reserved.</p>
+      <p className="font-heading">
+        © 2025 {profileRes?.name}. All rights reserved.
+      </p>
 
       <div className="flex items-center gap-1.5">
         {profileRes?.contacts.map((item) => {
@@ -29,7 +31,7 @@ const Footer = async (props: Props) => {
                 target={item.newTab ? "_blank" : undefined}
                 title={item.title}
               >
-                <Icon />
+                <Icon.icon color={Icon.color} />
               </Link>
             </Button>
           );

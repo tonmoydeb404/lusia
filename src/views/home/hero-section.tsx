@@ -20,8 +20,12 @@ const HeroSection = async (props: Props) => {
           className="mb-7 rounded-full"
         />
       )}
-      <h1 className="text-3xl sm:text-4xl font-bold mb-2">{page.title}</h1>
-      <p className="text-base sm:text-lg mb-10">{page.description}</p>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-2 font-heading">
+        {page.title}
+      </h1>
+      <p className="text-base sm:text-lg mb-10 text-muted-foreground">
+        {page.description}
+      </p>
       <div className="flex justify-between flex-col sm:flex-row sm:items-center gap-5">
         <div className="flex items-center flex-wrap gap-2">
           {callToActions?.map((item, index) => {
@@ -38,7 +42,7 @@ const HeroSection = async (props: Props) => {
                   href={item.href}
                   target={item.newTab ? "_blank" : undefined}
                 >
-                  {item.ref && <Icon />} {item.title}
+                  {item.ref && <Icon.icon color={Icon.color} />} {item.title}
                 </Link>
               </Button>
             );
@@ -59,7 +63,7 @@ const HeroSection = async (props: Props) => {
                 key={item.href}
                 asChild
                 size={"icon"}
-                variant={"outline"}
+                variant={"secondary"}
                 className="[&_svg]:size-6"
               >
                 <Link
@@ -67,7 +71,7 @@ const HeroSection = async (props: Props) => {
                   target={item.newTab ? "_blank" : undefined}
                   title={item.title}
                 >
-                  <Icon />
+                  <Icon.icon color={Icon.color} />
                 </Link>
               </Button>
             );

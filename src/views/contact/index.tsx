@@ -26,7 +26,7 @@ const ContactView = async (props: Props) => {
               <Badge
                 key={item.href}
                 asChild
-                variant={"secondary"}
+                variant={"inset"}
                 className="text-sm [&_svg]:!size-4"
               >
                 <Link
@@ -34,7 +34,7 @@ const ContactView = async (props: Props) => {
                   target={item.newTab ? "_blank" : undefined}
                   title={item.title}
                 >
-                  <Icon />
+                  <Icon.icon color={Icon.color} />
                   {item.title}
                 </Link>
               </Badge>

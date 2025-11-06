@@ -1,5 +1,6 @@
 import { generateOrganizationSchema } from "@/helpers/schema-org";
 import { TCMSWork } from "@/types/cms/work";
+import Link from "next/link";
 import Script from "next/script";
 
 type Props = {
@@ -11,8 +12,16 @@ const WorkCard = (props: Props) => {
   return (
     <article className="flex flex-col sm:flex-row sm:items-center gap-x-2 gap-y-1">
       <div className="flex items-center gap-x-2 gap-y-1 flex-wrap">
-        <h4 className="text-base font-medium">{data.position},</h4>
-        <h5 className="text-muted-foreground">{data.company}</h5>
+        <h4 className="text-base font-medium font-heading">{data.position},</h4>
+        <h5 className="text-muted-foreground font-heading">
+          {data.companyUrl ? (
+            <Link href={data.companyUrl ?? "#"} target="_blank">
+              {data.company}
+            </Link>
+          ) : (
+            data.company
+          )}
+        </h5>
       </div>
       <div className="flex-1 border-b border-dashed border-gray-300 dark:border-gray-700 mx-2 hidden sm:block" />
       <span className="text-sm text-muted-foreground">

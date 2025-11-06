@@ -29,12 +29,20 @@ export const icons = {
   whatsapp: BiLogoWhatsapp,
 };
 
+export const iconColors: Partial<Record<keyof typeof icons, string>> = {
+  discord: "#5865F2",
+  github: "var(--foreground)",
+  linkedin: "#0A66C2",
+  whatsapp: "#25D366",
+};
+
 export const getIcon = (name: unknown) => {
   const icon = icons?.[name as keyof typeof icons];
+  const color = iconColors?.[name as keyof typeof icons];
 
-  if (icon) {
-    return icon;
+  if (icon !== undefined) {
+    return { icon, color };
   }
 
-  return LuGlobe;
+  return { icon: LuGlobe, color: undefined };
 };

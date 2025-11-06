@@ -14,7 +14,11 @@ const PostCard = (props: Props) => {
     <article key={data.slug}>
       <div className="flex flex-col sm:flex-row sm:items-center gap-x-2 gap-y-0.5 mb-2">
         <h4 className="text-lg font-medium">
-          <Link href={data.url} target="_blank" className="hover:underline">
+          <Link
+            href={data.url}
+            target="_blank"
+            className="font-heading wavy-link"
+          >
             {data.title}
           </Link>
         </h4>

@@ -39,7 +39,7 @@ const Navigation = async (props: Props) => {
               >
                 <NavLink
                   href={item.path}
-                  className="[&.active]:after:h-0.5 [&.active]:after:bg-foreground"
+                  className="[&.active]:after:h-0.5 [&.active]:after:bg-foreground font-heading"
                 >
                   {item.title}
                 </NavLink>

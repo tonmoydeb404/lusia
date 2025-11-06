@@ -10,7 +10,7 @@ const RichTextSection = (props: Props) => {
   return (
     <div className="container">
       <article
-        className="prose dark:prose-invert max-w-full"
+        className="prose dark:prose-invert max-w-full [&_a]:wavy-link"
         dangerouslySetInnerHTML={{ __html: htmlString }}
       ></article>
     </div>

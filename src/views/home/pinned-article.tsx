@@ -17,11 +17,11 @@ const PinnedArticle = async (props: Props) => {
     >
       {pinnedPostRes ? (
         <>
-          <h3 className="font-bold mb-1.5 flex items-center gap-x-1 line-clamp-2">
+          <h3 className="font-semibold font-heading mb-1.5 flex items-center gap-x-1">
             <Link
               href={pinnedPostRes.url}
               target="_blank"
-              className="hover:underline decoration-wavy"
+              className="wavy-link"
             >
               {pinnedPostRes.title}
             </Link>
@@ -39,7 +39,7 @@ const PinnedArticle = async (props: Props) => {
         </>
       ) : (
         <>
-          <h3 className="font-bold mb-1.5 flex items-center gap-x-1">
+          <h3 className="font-semibold font-heading mb-1.5 flex items-center gap-x-1">
             No pinned article yet
           </h3>
           <p className="text-sm text-muted-foreground">

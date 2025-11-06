@@ -31,8 +31,8 @@ const ProductCard = (props: Props) => {
         />
       </div>
       <div className="flex items-center flex-wrap mb-1">
-        <h3 className="text-xl font-bold">{product.title}</h3>
-        <Badge className="ml-2" variant={"secondary"}>
+        <h3 className="text-xl font-semibold font-heading">{product.title}</h3>
+        <Badge className="ml-2" variant={"inset"}>
           {pricingTypeLabel[product.pricingType]}
         </Badge>
       </div>

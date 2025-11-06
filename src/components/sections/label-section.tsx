@@ -17,7 +17,9 @@ const LabelSection = (props: Props) => {
         others.className
       )}
     >
-      <h2 className="mb-3 text-muted-foreground text-sm">{label}</h2>
+      <h2 className="mb-3 text-muted-foreground text-sm font-heading">
+        {label}
+      </h2>
       <div className={cn("bg-background rounded-2xl", wrapperClassname)}>
         {children}
       </div>

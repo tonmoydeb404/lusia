@@ -6,17 +6,19 @@ import { fetchPage } from "@/services/cms/page";
 import { fetchProfile } from "@/services/cms/profile";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
 });
 
 type Props = {
@@ -29,7 +31,7 @@ export default async function RootLayout(props: Props) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased pb-20`}
+        className={`${inter.variable} ${outfit.variable} antialiased pb-20`}
       >
         <ThemeProvider>
           <AppLayout>{children}</AppLayout>

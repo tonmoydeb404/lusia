@@ -5,7 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme inline {
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-outfit);
+
   --breakpoint-*: initial;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
@@ -131,12 +134,16 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@utility wavy-link {
+  @apply hover:underline underline-offset-3 decoration-wavy decoration-primary;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
     background-image: url("/images/noise.png");
     background-size: 200px 200px;
     background-position: 0 0;
