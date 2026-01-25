@@ -14,6 +14,7 @@ const PinnedArticle = async (props: Props) => {
       label="Pinned Article"
       className="min-h-full"
       wrapperClassname="p-4 grow"
+      glowingEffect
     >
       {pinnedPostRes ? (
         <>

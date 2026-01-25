@@ -15,11 +15,21 @@ const SearchBarItem = (props: Props) => {
 
   return (
     <CommandItem
-      onSelect={() => handleSelect(data)}
+      onSelect={() => {
+        const link = document.getElementById(`search-dialog-link-${data.href}`);
+        if (link) {
+          link?.click();
+        }
+        handleSelect(data);
+      }}
       className="flex items-center gap-3 cursor-pointer"
       asChild
     >
-      <Link href={data.href} target={data.newTab ? "_blank" : undefined}>
+      <Link
+        href={data.href}
+        target={data.newTab ? "_blank" : undefined}
+        id={`search-dialog-link-${data.href}`}
+      >
         <Icon.icon color={Icon.color} />
         <div className="flex-1 min-w-0">
           <h3 className="font-medium truncate">{data.title}</h3>

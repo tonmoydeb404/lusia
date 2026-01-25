@@ -14,6 +14,7 @@ const GithubActivity = (props: Props) => {
       label="Github Activity"
       wrapperClassname="p-4"
       className="min-h-full"
+      glowingEffect
     >
       <ScrollArea className="text-muted-foreground">
         <GitHubCalendar

@@ -20,15 +20,15 @@ export async function POST(req: NextRequest) {
   if (!isValidRequest) {
     return Response.json(
       { message: "Invalid Hashnode signature" },
-      { status: 401 }
+      { status: 401 },
     );
   }
 
-  revalidateTag(CacheTags.HN_POSTS);
-  revalidateTag(CacheTags.HN_PINNED);
+  revalidateTag(CacheTags.HN_POSTS, "max");
+  revalidateTag(CacheTags.HN_PINNED, "max");
 
   return Response.json(
     { message: "Valid Hashnode signature" },
-    { status: 200 }
+    { status: 200 },
   );
 }

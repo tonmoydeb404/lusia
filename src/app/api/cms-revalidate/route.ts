@@ -35,20 +35,20 @@ export async function POST(req: NextRequest) {
   try {
     switch (type) {
       case TCMSContentType.PAGE:
-        revalidateTag(CacheTags.CMS_PAGES);
-        revalidateTag(`${CacheTags.CMS_PAGES}-${body?.data.slug}`);
+        revalidateTag(CacheTags.CMS_PAGES, "max");
+        revalidateTag(`${CacheTags.CMS_PAGES}-${body?.data.slug}`, "max");
         break;
       case TCMSContentType.PRODUCT:
-        revalidateTag(CacheTags.CMS_PRODUCTS);
+        revalidateTag(CacheTags.CMS_PRODUCTS, "max");
         break;
       case TCMSContentType.PROFILE:
-        revalidateTag(CacheTags.CMS_PROFILE);
+        revalidateTag(CacheTags.CMS_PROFILE, "max");
         break;
       case TCMSContentType.STACK:
-        revalidateTag(CacheTags.CMS_STACKS);
+        revalidateTag(CacheTags.CMS_STACKS, "max");
         break;
       case TCMSContentType.WORK:
-        revalidateTag(CacheTags.CMS_WORKS);
+        revalidateTag(CacheTags.CMS_WORKS, "max");
         break;
       default:
         return Response.json({ message: "Invalid type" }, { status: 400 });
