@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { hostname: "ap-south-1.graphassets.com" },
     ],
     dangerouslyAllowSVG: true,
+    formats: ["image/avif", "image/webp"],
   },
   async headers() {
     return [
