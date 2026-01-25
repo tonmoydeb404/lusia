@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Kbd, KbdGroup } from "@/components/ui/kbd";
 import {
   Tooltip,
   TooltipContent,
@@ -64,14 +63,7 @@ const ThemeBtn = () => {
         </Button>
       </TooltipTrigger>
       <TooltipContent>
-        <div className="flex items-center gap-2">
-          <span>Toggle Theme</span>
-          <KbdGroup>
-            {keys.map((k) => (
-              <Kbd key={k}>{k}</Kbd>
-            ))}
-          </KbdGroup>
-        </div>
+        <span>Toggle Theme</span>
       </TooltipContent>
     </Tooltip>
   );

@@ -4,7 +4,6 @@ import { useKeyboardShortcut } from "@/hooks/use-keyboard-shortcut";
 import React, { useCallback, useState } from "react";
 import { LuSearch } from "react-icons/lu";
 import { Button } from "../ui/button";
-import { Kbd, KbdGroup } from "../ui/kbd";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import { SearchDialog } from "./dialog";
 import { SearchProps } from "./types";
@@ -41,14 +40,7 @@ export const SearchBar: React.FC<SearchBarProps> = (props: SearchBarProps) => {
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <div className="flex items-center gap-2">
-            <span>Search</span>
-            <KbdGroup>
-              {keys.map((k) => (
-                <Kbd key={k}>{k}</Kbd>
-              ))}
-            </KbdGroup>
-          </div>
+          <span>Search</span>
         </TooltipContent>
       </Tooltip>
 
