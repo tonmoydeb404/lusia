@@ -20,6 +20,7 @@ const TechStack = (props: Props) => {
       label="Tech Stack"
       className="min-h-full"
       wrapperClassname="p-4 grow"
+      glowingEffect
     >
       <TooltipProvider>
         <div className="flex items-center flex-wrap gap-2">

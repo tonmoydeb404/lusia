@@ -19,6 +19,7 @@ const RecentActivity = (props: Props) => {
       label="Now Building"
       wrapperClassname="p-4 grow"
       className="min-h-full"
+      glowingEffect
     >
       {product ? (
         <>
@@ -49,7 +50,7 @@ const RecentActivity = (props: Props) => {
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(
-                generateSoftwareApplicationSchema(product)
+                generateSoftwareApplicationSchema(product),
               ),
             }}
           />
