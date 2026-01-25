@@ -27,12 +27,14 @@ const Footer = async (props: Props) => {
 
             return (
               <Tooltip key={item.href}>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <Button
                     asChild
                     size={"icon"}
                     variant={"secondary"}
                     className="[&_svg]:size-6"
+                    aria-label={item.title}
+                    aria-description="Footer links"
                   >
                     <Link
                       href={item.href}

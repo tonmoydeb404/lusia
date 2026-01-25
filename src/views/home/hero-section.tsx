@@ -42,6 +42,7 @@ const HeroSection = async (props: Props) => {
                 asChild
                 key={item.href}
                 variant={index === 0 ? "default" : "outline"}
+                aria-label={item.title}
               >
                 <Link
                   href={item.href}

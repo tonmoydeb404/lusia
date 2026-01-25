@@ -61,6 +61,7 @@ const ContactForm = (props: Props) => {
           className="mt-10"
           isLoading={isLoading || form.formState.isSubmitting}
           loadingText="Sending"
+          aria-label="Send message"
         >
           Send Message <LuSend />
         </Button>
