@@ -7,7 +7,6 @@ import { fetchProfile } from "@/services/cms/profile";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,32 +25,11 @@ type Props = {
   children: React.ReactNode;
 };
 
-const themeScript = `
-(function() {
-  try {
-    var theme = localStorage.getItem('theme');
-    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (theme === 'dark' || (theme === 'system' && systemDark) || (!theme && systemDark)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  } catch(e) {}
-})()
-`;
-
 export default async function RootLayout(props: Props) {
   const { children } = props;
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script
-          id="theme-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: themeScript }}
-        />
-      </head>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={`${inter.variable} ${outfit.variable} antialiased pb-20`}
       >
