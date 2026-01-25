@@ -38,17 +38,25 @@ const ProductCard = (props: Props) => {
       </div>
       <p className="text-muted-foreground">{product.description}</p>
 
-      <div className="flex items-center absolute right-5 top-5 gap-2 duration-300 md:-translate-y-[60px] group-hover:translate-y-0">
+      <div className="flex items-center absolute right-5 top-5 gap-2 duration-300 md:-translate-y-15 group-hover:translate-y-0">
         {product.liveLink && (
           <Button size={"icon"} variant={"secondary"} asChild>
-            <Link href={product.liveLink} target="_blank">
+            <Link
+              href={product.liveLink}
+              target="_blank"
+              aria-label="Open in new tab"
+            >
               <LuExternalLink />
             </Link>
           </Button>
         )}
         {product.sourceLink && (
           <Button size={"icon"} variant={"outline"} asChild>
-            <Link href={product.sourceLink} target="_blank">
+            <Link
+              href={product.sourceLink}
+              target="_blank"
+              aria-label="View source code"
+            >
               <LuGitBranch />
             </Link>
           </Button>

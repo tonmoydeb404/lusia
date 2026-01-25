@@ -44,14 +44,21 @@ const DrawerNavigation = (props: Props) => {
             {links.map((item, index) => (
               <DrawerClose key={index} asChild>
                 <Button variant={"outline"} asChild>
-                  <Link href={item.path}>{item.title}</Link>
+                  <Link
+                    href={item.path}
+                    aria-label={`Navigate to ${item.title}`}
+                  >
+                    {item.title}
+                  </Link>
                 </Button>
               </DrawerClose>
             ))}
           </div>
           <DrawerFooter>
             <DrawerClose asChild>
-              <Button variant="secondary">Close</Button>
+              <Button variant="secondary" aria-label="Close navigation drawer">
+                Close
+              </Button>
             </DrawerClose>
           </DrawerFooter>
         </div>

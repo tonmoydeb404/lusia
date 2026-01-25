@@ -16,7 +16,7 @@ const NotFoundView = (props: Props) => {
         title="404 - Not Found"
         description="The page you've requested is not exist in the galaxy"
       >
-        <Button className="mt-16" asChild>
+        <Button className="mt-16" asChild aria-label="Back to home">
           <Link href={paths.root}>
             Back to home <LuHouse />
           </Link>

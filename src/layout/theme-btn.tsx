@@ -41,6 +41,7 @@ const ThemeBtn = () => {
         size={"icon"}
         variant={"secondary"}
         className="animate-pulse"
+        aria-label="Toggle Theme"
       ></Button>
     );
 

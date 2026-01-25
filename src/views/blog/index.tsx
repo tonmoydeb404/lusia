@@ -18,7 +18,7 @@ const BlogView = (props: Props) => {
     <>
       <HeaderSection title={pageData.title} description={pageData.description}>
         <section className="mt-4">
-          <Button asChild>
+          <Button asChild aria-label="Visit blog">
             <Link href={`https://${envConfig.HASHNODE.URL}`} target="_blank">
               Visit Blog
             </Link>
