@@ -1,5 +1,11 @@
 import { getIcon } from "@/common/icons";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { fetchProfile } from "@/services/cms/profile";
 import Link from "next/link";
 
@@ -14,29 +20,36 @@ const Footer = async (props: Props) => {
         © 2025 {profileRes?.name}. All rights reserved.
       </p>
 
-      <div className="flex items-center gap-1.5">
-        {profileRes?.contacts.map((item) => {
-          const Icon = getIcon(item.ref);
+      <TooltipProvider>
+        <div className="flex items-center gap-1.5">
+          {profileRes?.contacts.map((item) => {
+            const Icon = getIcon(item.ref);
 
-          return (
-            <Button
-              key={item.href}
-              asChild
-              size={"icon"}
-              variant={"secondary"}
-              className="[&_svg]:size-6"
-            >
-              <Link
-                href={item.href}
-                target={item.newTab ? "_blank" : undefined}
-                title={item.title}
-              >
-                <Icon.icon color={Icon.color} />
-              </Link>
-            </Button>
-          );
-        })}
-      </div>
+            return (
+              <Tooltip key={item.href}>
+                <TooltipTrigger>
+                  <Button
+                    asChild
+                    size={"icon"}
+                    variant={"secondary"}
+                    className="[&_svg]:size-6"
+                  >
+                    <Link
+                      href={item.href}
+                      target={item.newTab ? "_blank" : undefined}
+                    >
+                      <Icon.icon color={Icon.color} />
+                    </Link>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{item.title}</p>
+                </TooltipContent>
+              </Tooltip>
+            );
+          })}
+        </div>
+      </TooltipProvider>
     </footer>
   );
 };
