@@ -7,7 +7,8 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
       <BaseStyle />
       <NextThemesProvider
         attribute="class"
-        defaultTheme="dark"
+        defaultTheme="system"
+        enableSystem
         disableTransitionOnChange
       >
         {children}
