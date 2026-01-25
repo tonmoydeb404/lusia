@@ -64,6 +64,10 @@
   }
 }
 
+html {
+  color-scheme: light dark;
+}
+
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
