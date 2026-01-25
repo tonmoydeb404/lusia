@@ -5,7 +5,11 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <BaseStyle />
-      <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="dark"
+        disableTransitionOnChange
+      >
         {children}
       </NextThemesProvider>
     </>
